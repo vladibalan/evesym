@@ -1,0 +1,3 @@
+vibs_evesym_homepage:
+    path:     /
+    defaults: { _controller: VibsEvesymBundle:Default:index }
