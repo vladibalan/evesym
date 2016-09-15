@@ -1,0 +1,30 @@
+{
+	"name": "vibs/evesym",
+	"description" : "Eve Online doctrine entities",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "vlad-Iulian Balan",
+        "email" : "vladibalan@yahoo.com"
+    }],
+    "keywords" : [
+        "eve online bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Vibs\\EvesymBundle" : ""
+        }
+    },
+    "target-dir" : "Vibs/EvesymBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "0.1"
+        }
+    }
+}
