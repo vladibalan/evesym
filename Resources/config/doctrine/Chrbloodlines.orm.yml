@@ -1,0 +1,142 @@
+Vibs\EvesymBundle\Entity\Chrbloodlines:
+    type: entity
+    table: chrBloodlines
+    indexes:
+        raceID:
+            columns:
+                - raceID
+        shipTypeID:
+            columns:
+                - shipTypeID
+        corporationID:
+            columns:
+                - corporationID
+        iconID:
+            columns:
+                - iconID
+    id:
+        bloodlineid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bloodlineID
+            generator:
+                strategy: IDENTITY
+    fields:
+        bloodlinename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bloodlineName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        maledescription:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: maleDescription
+        femaledescription:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: femaleDescription
+        perception:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        willpower:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        charisma:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        memory:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        intelligence:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        shortdescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: shortDescription
+        shortmaledescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: shortMaleDescription
+        shortfemaledescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: shortFemaleDescription
+    manyToOne:
+        raceid:
+            targetEntity: Chrraces
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                raceID:
+                    referencedColumnName: raceID
+            orphanRemoval: false
+        corporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        shiptypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                shipTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

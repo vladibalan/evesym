@@ -1,0 +1,25 @@
+Vibs\EvesymBundle\Entity\Mapjumps:
+    type: entity
+    table: mapJumps
+    indexes:
+        destinationID:
+            columns:
+                - destinationID
+    id:
+        stargateid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: stargateID
+            generator:
+                strategy: IDENTITY
+    fields:
+        destinationid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: destinationID
+    lifecycleCallbacks: {  }

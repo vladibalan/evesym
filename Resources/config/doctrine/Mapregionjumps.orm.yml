@@ -1,0 +1,41 @@
+Vibs\EvesymBundle\Entity\Mapregionjumps:
+    type: entity
+    table: mapRegionJumps
+    indexes:
+        fromRegionID:
+            columns:
+                - fromRegionID
+        toRegionID:
+            columns:
+                - toRegionID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        fromregionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fromRegionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        toregionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                toRegionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

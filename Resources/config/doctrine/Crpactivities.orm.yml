@@ -1,0 +1,28 @@
+Vibs\EvesymBundle\Entity\Crpactivities:
+    type: entity
+    table: crpActivities
+    id:
+        activityid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: activityID
+            generator:
+                strategy: IDENTITY
+    fields:
+        activityname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: activityName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

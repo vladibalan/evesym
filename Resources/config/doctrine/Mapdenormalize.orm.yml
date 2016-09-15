@@ -1,0 +1,153 @@
+Vibs\EvesymBundle\Entity\Mapdenormalize:
+    type: entity
+    table: mapDenormalize
+    indexes:
+        ix_mapDenormalize_regionID:
+            columns:
+                - regionID
+        mapDenormalize_IX_groupConstellation:
+            columns:
+                - groupID
+                - constellationID
+        ix_mapDenormalize_solarSystemID:
+            columns:
+                - solarSystemID
+        ix_mapDenormalize_orbitID:
+            columns:
+                - orbitID
+        mapDenormalize_IX_groupSystem:
+            columns:
+                - groupID
+                - solarSystemID
+        ix_mapDenormalize_constellationID:
+            columns:
+                - constellationID
+        mapDenormalize_IX_groupRegion:
+            columns:
+                - groupID
+                - regionID
+        ix_mapDenormalize_typeID:
+            columns:
+                - typeID
+        IDX_64B77626D6EFA878:
+            columns:
+                - groupID
+    id: {  }
+    fields:
+        x:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        'y':
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        z:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        radius:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        itemname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: itemName
+        security:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        celestialindex:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: celestialIndex
+        orbitindex:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: orbitIndex
+    oneToOne:
+        itemid:
+            targetEntity: Invnames
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                itemID:
+                    referencedColumnName: itemID
+            orphanRemoval: false
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        groupid:
+            targetEntity: Invgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                groupID:
+                    referencedColumnName: groupID
+            orphanRemoval: false
+        solarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                solarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+        constellationid:
+            targetEntity: Mapconstellations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                constellationID:
+                    referencedColumnName: constellationID
+            orphanRemoval: false
+        regionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                regionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        orbitid:
+            targetEntity: Mapcelestialstatistics
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                orbitID:
+                    referencedColumnName: celestialID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

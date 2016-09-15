@@ -1,0 +1,92 @@
+Vibs\EvesymBundle\Entity\Dgmexpressions:
+    type: entity
+    table: dgmExpressions
+    indexes:
+        expressionTypeID:
+            columns:
+                - expressionTypeID
+        expressionGroupID:
+            columns:
+                - expressionGroupID
+        expressionAttributeID:
+            columns:
+                - expressionAttributeID
+    id:
+        expressionid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: expressionID
+            generator:
+                strategy: IDENTITY
+    fields:
+        operandid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: operandID
+        arg1:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        arg2:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        expressionvalue:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: expressionValue
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        expressionname:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: expressionName
+    manyToOne:
+        expressiontypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                expressionTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        expressiongroupid:
+            targetEntity: Invgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                expressionGroupID:
+                    referencedColumnName: groupID
+            orphanRemoval: false
+        expressionattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                expressionAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

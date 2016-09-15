@@ -1,0 +1,88 @@
+Vibs\EvesymBundle\Entity\Chrancestries:
+    type: entity
+    table: chrAncestries
+    indexes:
+        bloodlineID:
+            columns:
+                - bloodlineID
+        iconID:
+            columns:
+                - iconID
+    id:
+        ancestryid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ancestryID
+            generator:
+                strategy: IDENTITY
+    fields:
+        ancestryname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ancestryName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        perception:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        willpower:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        charisma:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        memory:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        intelligence:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        shortdescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: shortDescription
+    manyToOne:
+        bloodlineid:
+            targetEntity: Chrbloodlines
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bloodlineID:
+                    referencedColumnName: bloodlineID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

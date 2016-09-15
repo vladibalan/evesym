@@ -1,0 +1,41 @@
+Vibs\EvesymBundle\Entity\Crpnpccorporationresearchfields:
+    type: entity
+    table: crpNPCCorporationResearchFields
+    indexes:
+        skillID:
+            columns:
+                - skillID
+        corporationID:
+            columns:
+                - corporationID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        skillid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                skillID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        corporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,41 @@
+Vibs\EvesymBundle\Entity\Agtresearchagents:
+    type: entity
+    table: agtResearchAgents
+    indexes:
+        ix_agtResearchAgents_typeID:
+            columns:
+                - typeID
+        agentID:
+            columns:
+                - agentID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        agentid:
+            targetEntity: Agtagents
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                agentID:
+                    referencedColumnName: agentID
+            orphanRemoval: false
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

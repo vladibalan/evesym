@@ -1,0 +1,47 @@
+Vibs\EvesymBundle\Entity\Industryactivity:
+    type: entity
+    table: industryActivity
+    indexes:
+        ix_industryActivity_activityID:
+            columns:
+                - activityID
+        typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        time:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        activityid:
+            targetEntity: Ramactivities
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                activityID:
+                    referencedColumnName: activityID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

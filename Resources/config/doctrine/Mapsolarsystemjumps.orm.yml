@@ -1,0 +1,93 @@
+Vibs\EvesymBundle\Entity\Mapsolarsystemjumps:
+    type: entity
+    table: mapSolarSystemJumps
+    indexes:
+        fromSolarSystemID:
+            columns:
+                - fromSolarSystemID
+        fromRegionID:
+            columns:
+                - fromRegionID
+        fromConstellationID:
+            columns:
+                - fromConstellationID
+        toConstellationID:
+            columns:
+                - toConstellationID
+        toRegionID:
+            columns:
+                - toRegionID
+        toSolarSystemID:
+            columns:
+                - toSolarSystemID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        fromregionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fromRegionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        fromconstellationid:
+            targetEntity: Mapconstellations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fromConstellationID:
+                    referencedColumnName: constellationID
+            orphanRemoval: false
+        fromsolarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fromSolarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+        tosolarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                toSolarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+        toconstellationid:
+            targetEntity: Mapconstellations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                toConstellationID:
+                    referencedColumnName: constellationID
+            orphanRemoval: false
+        toregionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                toRegionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

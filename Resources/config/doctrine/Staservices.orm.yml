@@ -1,0 +1,28 @@
+Vibs\EvesymBundle\Entity\Staservices:
+    type: entity
+    table: staServices
+    id:
+        serviceid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: serviceID
+            generator:
+                strategy: IDENTITY
+    fields:
+        servicename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: serviceName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

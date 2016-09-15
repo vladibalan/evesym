@@ -1,0 +1,50 @@
+Vibs\EvesymBundle\Entity\Chrraces:
+    type: entity
+    table: chrRaces
+    indexes:
+        iconID:
+            columns:
+                - iconID
+    id:
+        raceid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: raceID
+            generator:
+                strategy: IDENTITY
+    fields:
+        racename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: raceName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        shortdescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: shortDescription
+    manyToOne:
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

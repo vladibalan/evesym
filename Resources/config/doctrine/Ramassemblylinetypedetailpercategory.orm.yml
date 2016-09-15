@@ -1,0 +1,60 @@
+Vibs\EvesymBundle\Entity\Ramassemblylinetypedetailpercategory:
+    type: entity
+    table: ramAssemblyLineTypeDetailPerCategory
+    indexes:
+        assemblyLineTypeID:
+            columns:
+                - assemblyLineTypeID
+        categoryID:
+            columns:
+                - categoryID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        timemultiplier:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: timeMultiplier
+        materialmultiplier:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: materialMultiplier
+        costmultiplier:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: costMultiplier
+    manyToOne:
+        assemblylinetypeid:
+            targetEntity: Ramassemblylinetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                assemblyLineTypeID:
+                    referencedColumnName: assemblyLineTypeID
+            orphanRemoval: false
+        categoryid:
+            targetEntity: Invcategories
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                categoryID:
+                    referencedColumnName: categoryID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

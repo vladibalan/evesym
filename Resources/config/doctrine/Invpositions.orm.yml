@@ -1,0 +1,47 @@
+Vibs\EvesymBundle\Entity\Invpositions:
+    type: entity
+    table: invPositions
+    id: {  }
+    fields:
+        x:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        'y':
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        z:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        yaw:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        pitch:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        roll:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+    oneToOne:
+        itemid:
+            targetEntity: Invnames
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                itemID:
+                    referencedColumnName: itemID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,38 @@
+Vibs\EvesymBundle\Entity\Ramactivities:
+    type: entity
+    table: ramActivities
+    id:
+        activityid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: activityID
+            generator:
+                strategy: IDENTITY
+    fields:
+        activityname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: activityName
+        iconno:
+            type: string
+            nullable: true
+            length: 5
+            options:
+                fixed: false
+            column: iconNo
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        published:
+            type: boolean
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,60 @@
+Vibs\EvesymBundle\Entity\Industryactivityprobabilities:
+    type: entity
+    table: industryActivityProbabilities
+    indexes:
+        ix_industryActivityProbabilities_typeID:
+            columns:
+                - typeID
+        ix_industryActivityProbabilities_productTypeID:
+            columns:
+                - productTypeID
+        activityID:
+            columns:
+                - activityID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        probability:
+            type: decimal
+            nullable: true
+            precision: 3
+            scale: 2
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        activityid:
+            targetEntity: Ramactivities
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                activityID:
+                    referencedColumnName: activityID
+            orphanRemoval: false
+        producttypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                productTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

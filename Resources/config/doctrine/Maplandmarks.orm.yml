@@ -1,0 +1,55 @@
+Vibs\EvesymBundle\Entity\Maplandmarks:
+    type: entity
+    table: mapLandmarks
+    id:
+        landmarkid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: landmarkID
+            generator:
+                strategy: IDENTITY
+    fields:
+        landmarkname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: landmarkName
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        locationid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: locationID
+        x:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        'y':
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        z:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        iconid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: iconID
+    lifecycleCallbacks: {  }

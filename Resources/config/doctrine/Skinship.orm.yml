@@ -1,0 +1,41 @@
+Vibs\EvesymBundle\Entity\Skinship:
+    type: entity
+    table: skinShip
+    indexes:
+        ix_skinShip_skinID:
+            columns:
+                - skinID
+        ix_skinShip_typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        skinid:
+            targetEntity: Skins
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                skinID:
+                    referencedColumnName: skinID
+            orphanRemoval: false
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,40 @@
+Vibs\EvesymBundle\Entity\Invcategories:
+    type: entity
+    table: invCategories
+    indexes:
+        iconID:
+            columns:
+                - iconID
+    id:
+        categoryid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: categoryID
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: categoryName
+        published:
+            type: boolean
+            nullable: true
+    manyToOne:
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

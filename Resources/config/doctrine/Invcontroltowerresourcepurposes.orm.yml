@@ -1,0 +1,21 @@
+Vibs\EvesymBundle\Entity\Invcontroltowerresourcepurposes:
+    type: entity
+    table: invControlTowerResourcePurposes
+    id:
+        purpose:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        purposetext:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: purposeText
+    lifecycleCallbacks: {  }

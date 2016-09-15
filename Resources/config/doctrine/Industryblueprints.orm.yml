@@ -1,0 +1,23 @@
+Vibs\EvesymBundle\Entity\Industryblueprints:
+    type: entity
+    table: industryBlueprints
+    id: {  }
+    fields:
+        maxproductionlimit:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: maxProductionLimit
+    oneToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

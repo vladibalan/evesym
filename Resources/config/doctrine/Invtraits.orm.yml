@@ -1,0 +1,68 @@
+Vibs\EvesymBundle\Entity\Invtraits:
+    type: entity
+    table: invTraits
+    indexes:
+        typeID:
+            columns:
+                - typeID
+        skillID:
+            columns:
+                - skillID
+        unitID:
+            columns:
+                - unitID
+    id:
+        traitid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: traitID
+            generator:
+                strategy: IDENTITY
+    fields:
+        bonus:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        bonustext:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bonusText
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        skillid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                skillID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        unitid:
+            targetEntity: Eveunits
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                unitID:
+                    referencedColumnName: unitID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

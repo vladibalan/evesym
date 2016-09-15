@@ -1,0 +1,28 @@
+Vibs\EvesymBundle\Entity\Eveicons:
+    type: entity
+    table: eveIcons
+    id:
+        iconid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: iconID
+            generator:
+                strategy: IDENTITY
+    fields:
+        iconfile:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: iconFile
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

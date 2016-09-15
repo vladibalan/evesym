@@ -1,0 +1,72 @@
+Vibs\EvesymBundle\Entity\Ramassemblylinetypes:
+    type: entity
+    table: ramAssemblyLineTypes
+    indexes:
+        activityID:
+            columns:
+                - activityID
+    id:
+        assemblylinetypeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: assemblyLineTypeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        assemblylinetypename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: assemblyLineTypeName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        basetimemultiplier:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: baseTimeMultiplier
+        basematerialmultiplier:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: baseMaterialMultiplier
+        basecostmultiplier:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: baseCostMultiplier
+        volume:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        mincostperhour:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: minCostPerHour
+    manyToOne:
+        activityid:
+            targetEntity: Ramactivities
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                activityID:
+                    referencedColumnName: activityID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

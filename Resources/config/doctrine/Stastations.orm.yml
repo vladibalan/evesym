@@ -1,0 +1,158 @@
+Vibs\EvesymBundle\Entity\Stastations:
+    type: entity
+    table: staStations
+    indexes:
+        ix_staStations_solarSystemID:
+            columns:
+                - solarSystemID
+        ix_staStations_operationID:
+            columns:
+                - operationID
+        ix_staStations_constellationID:
+            columns:
+                - constellationID
+        ix_staStations_stationTypeID:
+            columns:
+                - stationTypeID
+        ix_staStations_corporationID:
+            columns:
+                - corporationID
+        ix_staStations_regionID:
+            columns:
+                - regionID
+    id:
+        stationid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: stationID
+            generator:
+                strategy: IDENTITY
+    fields:
+        security:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        dockingcostpervolume:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockingCostPerVolume
+        maxshipvolumedockable:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: maxShipVolumeDockable
+        officerentalcost:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: officeRentalCost
+        stationname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: stationName
+        x:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        'y':
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        z:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        reprocessingefficiency:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: reprocessingEfficiency
+        reprocessingstationstake:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: reprocessingStationsTake
+        reprocessinghangarflag:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: reprocessingHangarFlag
+    manyToOne:
+        operationid:
+            targetEntity: Staoperations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                operationID:
+                    referencedColumnName: operationID
+            orphanRemoval: false
+        stationtypeid:
+            targetEntity: Stastationtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stationTypeID:
+                    referencedColumnName: stationTypeID
+            orphanRemoval: false
+        corporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        solarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                solarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+        constellationid:
+            targetEntity: Mapconstellations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                constellationID:
+                    referencedColumnName: constellationID
+            orphanRemoval: false
+        regionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                regionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

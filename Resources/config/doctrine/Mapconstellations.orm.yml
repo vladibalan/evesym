@@ -1,0 +1,106 @@
+Vibs\EvesymBundle\Entity\Mapconstellations:
+    type: entity
+    table: mapConstellations
+    indexes:
+        regionID:
+            columns:
+                - regionID
+        factionID:
+            columns:
+                - factionID
+    id:
+        constellationid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: constellationID
+            generator:
+                strategy: IDENTITY
+    fields:
+        constellationname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: constellationName
+        x:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        'y':
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        z:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        xmin:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: xMin
+        xmax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: xMax
+        ymin:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: yMin
+        ymax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: yMax
+        zmin:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: zMin
+        zmax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: zMax
+        radius:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+    manyToOne:
+        regionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                regionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        factionid:
+            targetEntity: Chrfactions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                factionID:
+                    referencedColumnName: factionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

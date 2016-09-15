@@ -1,0 +1,51 @@
+Vibs\EvesymBundle\Entity\Translationtables:
+    type: entity
+    table: translationTables
+    indexes:
+        sourceTable:
+            columns:
+                - sourceTable
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        sourcetable:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+            column: sourceTable
+        destinationtable:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: destinationTable
+        translatedkey:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+            column: translatedKey
+        tcgroupid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: tcGroupID
+        tcid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: tcID
+    lifecycleCallbacks: {  }

@@ -1,0 +1,64 @@
+Vibs\EvesymBundle\Entity\Industryactivityskills:
+    type: entity
+    table: industryActivitySkills
+    indexes:
+        industryActivitySkills_idx1:
+            columns:
+                - typeID
+                - activityID
+        ix_industryActivitySkills_typeID:
+            columns:
+                - typeID
+        ix_industryActivitySkills_skillID:
+            columns:
+                - skillID
+        activityID:
+            columns:
+                - activityID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        level:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        activityid:
+            targetEntity: Ramactivities
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                activityID:
+                    referencedColumnName: activityID
+            orphanRemoval: false
+        skillid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                skillID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

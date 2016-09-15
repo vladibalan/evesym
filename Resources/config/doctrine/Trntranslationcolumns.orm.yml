@@ -1,0 +1,42 @@
+Vibs\EvesymBundle\Entity\Trntranslationcolumns:
+    type: entity
+    table: trnTranslationColumns
+    id:
+        tcid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: tcID
+            generator:
+                strategy: IDENTITY
+    fields:
+        tcgroupid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: tcGroupID
+        tablename:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: tableName
+        columnname:
+            type: string
+            nullable: false
+            length: 128
+            options:
+                fixed: false
+            column: columnName
+        masterid:
+            type: string
+            nullable: true
+            length: 128
+            options:
+                fixed: false
+            column: masterID
+    lifecycleCallbacks: {  }

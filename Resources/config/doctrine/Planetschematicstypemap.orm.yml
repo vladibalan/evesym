@@ -1,0 +1,51 @@
+Vibs\EvesymBundle\Entity\Planetschematicstypemap:
+    type: entity
+    table: planetSchematicsTypeMap
+    indexes:
+        schematicID:
+            columns:
+                - schematicID
+        typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        quantity:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        isinput:
+            type: boolean
+            nullable: true
+            column: isInput
+    manyToOne:
+        schematicid:
+            targetEntity: Planetschematics
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                schematicID:
+                    referencedColumnName: schematicID
+            orphanRemoval: false
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

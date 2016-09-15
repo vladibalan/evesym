@@ -1,0 +1,19 @@
+Vibs\EvesymBundle\Entity\Invvolumes:
+    type: entity
+    table: invVolumes
+    id:
+        typeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        volume:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,56 @@
+Vibs\EvesymBundle\Entity\Warcombatzones:
+    type: entity
+    table: warCombatZones
+    indexes:
+        centerSystemID:
+            columns:
+                - centerSystemID
+        factionID:
+            columns:
+                - factionID
+    id:
+        combatzoneid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: combatZoneID
+            generator:
+                strategy: IDENTITY
+    fields:
+        combatzonename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: combatZoneName
+        description:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+    manyToOne:
+        factionid:
+            targetEntity: Chrfactions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                factionID:
+                    referencedColumnName: factionID
+            orphanRemoval: false
+        centersystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                centerSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

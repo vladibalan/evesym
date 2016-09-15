@@ -1,0 +1,31 @@
+Vibs\EvesymBundle\Entity\Warcombatzonesystems:
+    type: entity
+    table: warCombatZoneSystems
+    indexes:
+        combatZoneID:
+            columns:
+                - combatZoneID
+    id: {  }
+    oneToOne:
+        solarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                solarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+    manyToOne:
+        combatzoneid:
+            targetEntity: Warcombatzones
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                combatZoneID:
+                    referencedColumnName: combatZoneID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,22 @@
+Vibs\EvesymBundle\Entity\Agtagenttypes:
+    type: entity
+    table: agtAgentTypes
+    id:
+        agenttypeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: agentTypeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        agenttype:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: agentType
+    lifecycleCallbacks: {  }

@@ -1,0 +1,45 @@
+Vibs\EvesymBundle\Entity\Invuniquenames:
+    type: entity
+    table: invUniqueNames
+    indexes:
+        invUniqueNames_IX_GroupName:
+            columns:
+                - groupID
+                - itemName
+        IDX_8916E83CD6EFA878:
+            columns:
+                - groupID
+    uniqueConstraints:
+        ix_invUniqueNames_itemName:
+            columns:
+                - itemName
+    id:
+        itemid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: itemID
+            generator:
+                strategy: IDENTITY
+    fields:
+        itemname:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+            column: itemName
+    manyToOne:
+        groupid:
+            targetEntity: Invgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                groupID:
+                    referencedColumnName: groupID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

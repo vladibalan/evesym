@@ -1,0 +1,28 @@
+Vibs\EvesymBundle\Entity\Skins:
+    type: entity
+    table: skins
+    id:
+        skinid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: skinID
+            generator:
+                strategy: IDENTITY
+    fields:
+        internalname:
+            type: string
+            nullable: true
+            length: 70
+            options:
+                fixed: false
+            column: internalName
+        skinmaterialid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: skinMaterialID
+    lifecycleCallbacks: {  }

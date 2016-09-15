@@ -1,0 +1,92 @@
+Vibs\EvesymBundle\Entity\Dgmattributetypes:
+    type: entity
+    table: dgmAttributeTypes
+    indexes:
+        iconID:
+            columns:
+                - iconID
+        unitID:
+            columns:
+                - unitID
+        categoryID:
+            columns:
+                - categoryID
+    id:
+        attributeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: attributeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        attributename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: attributeName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        defaultvalue:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: defaultValue
+        published:
+            type: boolean
+            nullable: true
+        displayname:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: displayName
+        stackable:
+            type: boolean
+            nullable: true
+        highisgood:
+            type: boolean
+            nullable: true
+            column: highIsGood
+    manyToOne:
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+        unitid:
+            targetEntity: Eveunits
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                unitID:
+                    referencedColumnName: unitID
+            orphanRemoval: false
+        categoryid:
+            targetEntity: Dgmattributecategories
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                categoryID:
+                    referencedColumnName: categoryID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

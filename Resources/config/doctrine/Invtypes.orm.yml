@@ -1,0 +1,134 @@
+Vibs\EvesymBundle\Entity\Invtypes:
+    type: entity
+    table: invTypes
+    indexes:
+        ix_invTypes_groupID:
+            columns:
+                - groupID
+        marketGroupID:
+            columns:
+                - marketGroupID
+        soundID:
+            columns:
+                - soundID
+        graphicID:
+            columns:
+                - graphicID
+        iconID:
+            columns:
+                - iconID
+        raceID:
+            columns:
+                - raceID
+    id:
+        typeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: typeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        typename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: typeName
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        mass:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        volume:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        capacity:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        portionsize:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: portionSize
+        baseprice:
+            type: decimal
+            nullable: true
+            precision: 19
+            scale: 4
+            column: basePrice
+        published:
+            type: boolean
+            nullable: true
+        soundid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: soundID
+    manyToOne:
+        groupid:
+            targetEntity: Invgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                groupID:
+                    referencedColumnName: groupID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+        graphicid:
+            targetEntity: Evegraphics
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                graphicID:
+                    referencedColumnName: graphicID
+            orphanRemoval: false
+        marketgroupid:
+            targetEntity: Invmarketgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                marketGroupID:
+                    referencedColumnName: marketGroupID
+            orphanRemoval: false
+        raceid:
+            targetEntity: Chrraces
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                raceID:
+                    referencedColumnName: raceID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

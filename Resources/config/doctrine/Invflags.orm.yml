@@ -1,0 +1,35 @@
+Vibs\EvesymBundle\Entity\Invflags:
+    type: entity
+    table: invFlags
+    id:
+        flagid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: flagID
+            generator:
+                strategy: IDENTITY
+    fields:
+        flagname:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: flagName
+        flagtext:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: flagText
+        orderid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: orderID
+    lifecycleCallbacks: {  }

@@ -1,0 +1,78 @@
+Vibs\EvesymBundle\Entity\Mapuniverse:
+    type: entity
+    table: mapUniverse
+    id:
+        universeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: universeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        universename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: universeName
+        x:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        'y':
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        z:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        xmin:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: xMin
+        xmax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: xMax
+        ymin:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: yMin
+        ymax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: yMax
+        zmin:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: zMin
+        zmax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: zMax
+        radius:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+    lifecycleCallbacks: {  }

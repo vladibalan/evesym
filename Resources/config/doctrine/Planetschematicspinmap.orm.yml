@@ -1,0 +1,41 @@
+Vibs\EvesymBundle\Entity\Planetschematicspinmap:
+    type: entity
+    table: planetSchematicsPinMap
+    indexes:
+        schematicID:
+            columns:
+                - schematicID
+        pinTypeID:
+            columns:
+                - pinTypeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        schematicid:
+            targetEntity: Planetschematics
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                schematicID:
+                    referencedColumnName: schematicID
+            orphanRemoval: false
+        pintypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                pinTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

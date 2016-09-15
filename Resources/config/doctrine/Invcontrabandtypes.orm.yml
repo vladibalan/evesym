@@ -1,0 +1,66 @@
+Vibs\EvesymBundle\Entity\Invcontrabandtypes:
+    type: entity
+    table: invContrabandTypes
+    indexes:
+        ix_invContrabandTypes_typeID:
+            columns:
+                - typeID
+        factionID:
+            columns:
+                - factionID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        standingloss:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: standingLoss
+        confiscateminsec:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: confiscateMinSec
+        finebyvalue:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: fineByValue
+        attackminsec:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: attackMinSec
+    manyToOne:
+        factionid:
+            targetEntity: Chrfactions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                factionID:
+                    referencedColumnName: factionID
+            orphanRemoval: false
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

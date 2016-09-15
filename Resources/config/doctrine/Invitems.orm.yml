@@ -1,0 +1,80 @@
+Vibs\EvesymBundle\Entity\Invitems:
+    type: entity
+    table: invItems
+    indexes:
+        ix_invItems_locationID:
+            columns:
+                - locationID
+        items_IX_OwnerLocation:
+            columns:
+                - ownerID
+                - locationID
+        typeID:
+            columns:
+                - typeID
+        flagID:
+            columns:
+                - flagID
+        IDX_4A898CC9DB30DDED:
+            columns:
+                - ownerID
+    id: {  }
+    fields:
+        quantity:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        flagid:
+            targetEntity: Invflags
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                flagID:
+                    referencedColumnName: flagID
+            orphanRemoval: false
+        locationid:
+            targetEntity: Invnames
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                locationID:
+                    referencedColumnName: itemID
+            orphanRemoval: false
+        ownerid:
+            targetEntity: Invnames
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ownerID:
+                    referencedColumnName: itemID
+            orphanRemoval: false
+    oneToOne:
+        itemid:
+            targetEntity: Invnames
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                itemID:
+                    referencedColumnName: itemID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

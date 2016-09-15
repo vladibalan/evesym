@@ -1,0 +1,133 @@
+Vibs\EvesymBundle\Entity\Staoperations:
+    type: entity
+    table: staOperations
+    indexes:
+        activityID:
+            columns:
+                - activityID
+        caldariStationTypeID:
+            columns:
+                - caldariStationTypeID
+        minmatarStationTypeID:
+            columns:
+                - minmatarStationTypeID
+        amarrStationTypeID:
+            columns:
+                - amarrStationTypeID
+        gallenteStationTypeID:
+            columns:
+                - gallenteStationTypeID
+        joveStationTypeID:
+            columns:
+                - joveStationTypeID
+    id:
+        operationid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: operationID
+            generator:
+                strategy: IDENTITY
+    fields:
+        operationname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: operationName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        fringe:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        corridor:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        hub:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        border:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        ratio:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    manyToOne:
+        caldaristationtypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                caldariStationTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        minmatarstationtypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                minmatarStationTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        amarrstationtypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                amarrStationTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        gallentestationtypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                gallenteStationTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        jovestationtypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                joveStationTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        activityid:
+            targetEntity: Crpactivities
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                activityID:
+                    referencedColumnName: activityID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

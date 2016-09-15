@@ -1,0 +1,29 @@
+Vibs\EvesymBundle\Entity\Dgmattributecategories:
+    type: entity
+    table: dgmAttributeCategories
+    id:
+        categoryid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: categoryID
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryname:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: categoryName
+        categorydescription:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: categoryDescription
+    lifecycleCallbacks: {  }

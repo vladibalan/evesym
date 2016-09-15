@@ -1,0 +1,49 @@
+Vibs\EvesymBundle\Entity\Evegraphics:
+    type: entity
+    table: eveGraphics
+    id:
+        graphicid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: graphicID
+            generator:
+                strategy: IDENTITY
+    fields:
+        soffactionname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: sofFactionName
+        graphicfile:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: graphicFile
+        sofhullname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: sofHullName
+        sofracename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: sofRaceName
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

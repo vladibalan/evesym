@@ -1,0 +1,81 @@
+Vibs\EvesymBundle\Entity\Stastationtypes:
+    type: entity
+    table: staStationTypes
+    indexes:
+        operationID:
+            columns:
+                - operationID
+    id:
+        stationtypeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: stationTypeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        dockentryx:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockEntryX
+        dockentryy:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockEntryY
+        dockentryz:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockEntryZ
+        dockorientationx:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockOrientationX
+        dockorientationy:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockOrientationY
+        dockorientationz:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: dockOrientationZ
+        officeslots:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: officeSlots
+        reprocessingefficiency:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: reprocessingEfficiency
+        conquerable:
+            type: boolean
+            nullable: true
+    manyToOne:
+        operationid:
+            targetEntity: Staoperations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                operationID:
+                    referencedColumnName: operationID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

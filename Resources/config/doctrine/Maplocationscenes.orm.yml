@@ -1,0 +1,31 @@
+Vibs\EvesymBundle\Entity\Maplocationscenes:
+    type: entity
+    table: mapLocationScenes
+    indexes:
+        graphicID:
+            columns:
+                - graphicID
+    id: {  }
+    manyToOne:
+        graphicid:
+            targetEntity: Evegraphics
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                graphicID:
+                    referencedColumnName: graphicID
+            orphanRemoval: false
+    oneToOne:
+        locationid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                locationID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

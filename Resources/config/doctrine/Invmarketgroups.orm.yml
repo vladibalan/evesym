@@ -1,0 +1,60 @@
+Vibs\EvesymBundle\Entity\Invmarketgroups:
+    type: entity
+    table: invMarketGroups
+    indexes:
+        parentGroupID:
+            columns:
+                - parentGroupID
+        iconID:
+            columns:
+                - iconID
+    id:
+        marketgroupid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: marketGroupID
+            generator:
+                strategy: IDENTITY
+    fields:
+        marketgroupname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: marketGroupName
+        description:
+            type: string
+            nullable: true
+            length: 3000
+            options:
+                fixed: false
+        hastypes:
+            type: boolean
+            nullable: true
+            column: hasTypes
+    manyToOne:
+        parentgroupid:
+            targetEntity: Invmarketgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                parentGroupID:
+                    referencedColumnName: marketGroupID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

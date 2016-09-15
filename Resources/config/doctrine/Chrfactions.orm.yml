@@ -1,0 +1,113 @@
+Vibs\EvesymBundle\Entity\Chrfactions:
+    type: entity
+    table: chrFactions
+    indexes:
+        raceID:
+            columns:
+                - raceID
+        solarSystemID:
+            columns:
+                - solarSystemID
+        corporationID:
+            columns:
+                - corporationID
+        militiaCorporationID:
+            columns:
+                - militiaCorporationID
+        iconID:
+            columns:
+                - iconID
+    id:
+        factionid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: factionID
+            generator:
+                strategy: IDENTITY
+    fields:
+        factionname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: factionName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        sizefactor:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: sizeFactor
+        stationcount:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: stationCount
+        stationsystemcount:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: stationSystemCount
+    manyToOne:
+        raceid:
+            targetEntity: Chrraces
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                raceID:
+                    referencedColumnName: raceID
+            orphanRemoval: false
+        solarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                solarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+        corporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        militiacorporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                militiaCorporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

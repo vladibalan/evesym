@@ -1,0 +1,50 @@
+Vibs\EvesymBundle\Entity\Invtypereactions:
+    type: entity
+    table: invTypeReactions
+    indexes:
+        reactionTypeID:
+            columns:
+                - reactionTypeID
+        typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        input:
+            type: boolean
+            nullable: false
+        quantity:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    manyToOne:
+        reactiontypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                reactionTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

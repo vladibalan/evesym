@@ -1,0 +1,35 @@
+Vibs\EvesymBundle\Entity\Crpnpcdivisions:
+    type: entity
+    table: crpNPCDivisions
+    id:
+        divisionid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: divisionID
+            generator:
+                strategy: IDENTITY
+    fields:
+        divisionname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: divisionName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        leadertype:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: leaderType
+    lifecycleCallbacks: {  }

@@ -1,0 +1,43 @@
+Vibs\EvesymBundle\Entity\Invmetagroups:
+    type: entity
+    table: invMetaGroups
+    indexes:
+        iconID:
+            columns:
+                - iconID
+    id:
+        metagroupid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: metaGroupID
+            generator:
+                strategy: IDENTITY
+    fields:
+        metagroupname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: metaGroupName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+    manyToOne:
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

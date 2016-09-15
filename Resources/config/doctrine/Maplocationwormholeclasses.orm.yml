@@ -1,0 +1,25 @@
+Vibs\EvesymBundle\Entity\Maplocationwormholeclasses:
+    type: entity
+    table: mapLocationWormholeClasses
+    indexes:
+        wormholeClassID:
+            columns:
+                - wormholeClassID
+    id:
+        locationid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: locationID
+            generator:
+                strategy: IDENTITY
+    fields:
+        wormholeclassid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: wormholeClassID
+    lifecycleCallbacks: {  }

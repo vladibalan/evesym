@@ -1,0 +1,47 @@
+Vibs\EvesymBundle\Entity\Crpnpccorporationdivisions:
+    type: entity
+    table: crpNPCCorporationDivisions
+    indexes:
+        corporationID:
+            columns:
+                - corporationID
+        divisionID:
+            columns:
+                - divisionID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        size:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    manyToOne:
+        corporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        divisionid:
+            targetEntity: Crpnpcdivisions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                divisionID:
+                    referencedColumnName: divisionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

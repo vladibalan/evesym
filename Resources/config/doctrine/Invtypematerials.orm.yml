@@ -1,0 +1,47 @@
+Vibs\EvesymBundle\Entity\Invtypematerials:
+    type: entity
+    table: invTypeMaterials
+    indexes:
+        typeID:
+            columns:
+                - typeID
+        materialTypeID:
+            columns:
+                - materialTypeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        quantity:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        materialtypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                materialTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

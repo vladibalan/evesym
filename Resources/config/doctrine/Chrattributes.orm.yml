@@ -1,0 +1,56 @@
+Vibs\EvesymBundle\Entity\Chrattributes:
+    type: entity
+    table: chrAttributes
+    indexes:
+        iconID:
+            columns:
+                - iconID
+    id:
+        attributeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: attributeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        attributename:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: attributeName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        shortdescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: shortDescription
+        notes:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+    manyToOne:
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

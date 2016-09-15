@@ -1,0 +1,39 @@
+Vibs\EvesymBundle\Entity\Dgmtypeeffects:
+    type: entity
+    table: dgmTypeEffects
+    indexes:
+        typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        effectid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: effectID
+        isdefault:
+            type: boolean
+            nullable: true
+            column: isDefault
+    manyToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,79 @@
+Vibs\EvesymBundle\Entity\Agtagents:
+    type: entity
+    table: agtAgents
+    indexes:
+        ix_agtAgents_corporationID:
+            columns:
+                - corporationID
+        ix_agtAgents_locationID:
+            columns:
+                - locationID
+        divisionID:
+            columns:
+                - divisionID
+        agentTypeID:
+            columns:
+                - agentTypeID
+    id:
+        agentid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: agentID
+            generator:
+                strategy: IDENTITY
+    fields:
+        locationid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: locationID
+        level:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        quality:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        islocator:
+            type: boolean
+            nullable: true
+            column: isLocator
+    manyToOne:
+        divisionid:
+            targetEntity: Crpnpcdivisions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                divisionID:
+                    referencedColumnName: divisionID
+            orphanRemoval: false
+        agenttypeid:
+            targetEntity: Agtagenttypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                agentTypeID:
+                    referencedColumnName: agentTypeID
+            orphanRemoval: false
+        corporationid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporationID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

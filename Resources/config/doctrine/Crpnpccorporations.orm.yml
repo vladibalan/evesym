@@ -1,0 +1,235 @@
+Vibs\EvesymBundle\Entity\Crpnpccorporations:
+    type: entity
+    table: crpNPCCorporations
+    indexes:
+        solarSystemID:
+            columns:
+                - solarSystemID
+        investorID1:
+            columns:
+                - investorID1
+        investorID2:
+            columns:
+                - investorID2
+        investorID3:
+            columns:
+                - investorID3
+        investorID4:
+            columns:
+                - investorID4
+        friendID:
+            columns:
+                - friendID
+        enemyID:
+            columns:
+                - enemyID
+        factionID:
+            columns:
+                - factionID
+        iconID:
+            columns:
+                - iconID
+    id:
+        corporationid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: corporationID
+            generator:
+                strategy: IDENTITY
+    fields:
+        size:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+        extent:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+        investorshares1:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: investorShares1
+        investorshares2:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: investorShares2
+        investorshares3:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: investorShares3
+        investorshares4:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: investorShares4
+        publicshares:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: publicShares
+        initialprice:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: initialPrice
+        minsecurity:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: minSecurity
+        scattered:
+            type: boolean
+            nullable: true
+        fringe:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        corridor:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        hub:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        border:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        sizefactor:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: sizeFactor
+        stationcount:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: stationCount
+        stationsystemcount:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: stationSystemCount
+        description:
+            type: string
+            nullable: true
+            length: 4000
+            options:
+                fixed: false
+    manyToOne:
+        solarsystemid:
+            targetEntity: Mapsolarsystems
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                solarSystemID:
+                    referencedColumnName: solarSystemID
+            orphanRemoval: false
+        factionid:
+            targetEntity: Chrfactions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                factionID:
+                    referencedColumnName: factionID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+        friendid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                friendID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        enemyid:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                enemyID:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        investorid1:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                investorID1:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        investorid2:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                investorID2:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        investorid3:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                investorID3:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+        investorid4:
+            targetEntity: Crpnpccorporations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                investorID4:
+                    referencedColumnName: corporationID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

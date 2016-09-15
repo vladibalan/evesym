@@ -1,0 +1,67 @@
+Vibs\EvesymBundle\Entity\Invgroups:
+    type: entity
+    table: invGroups
+    indexes:
+        ix_invGroups_categoryID:
+            columns:
+                - categoryID
+        iconID:
+            columns:
+                - iconID
+    id:
+        groupid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: groupID
+            generator:
+                strategy: IDENTITY
+    fields:
+        groupname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: groupName
+        usebaseprice:
+            type: boolean
+            nullable: true
+            column: useBasePrice
+        anchored:
+            type: boolean
+            nullable: true
+        anchorable:
+            type: boolean
+            nullable: true
+        fittablenonsingleton:
+            type: boolean
+            nullable: true
+            column: fittableNonSingleton
+        published:
+            type: boolean
+            nullable: true
+    manyToOne:
+        categoryid:
+            targetEntity: Invcategories
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                categoryID:
+                    referencedColumnName: categoryID
+            orphanRemoval: false
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

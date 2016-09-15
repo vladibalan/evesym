@@ -1,0 +1,22 @@
+Vibs\EvesymBundle\Entity\Invnames:
+    type: entity
+    table: invNames
+    id:
+        itemid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: itemID
+            generator:
+                strategy: IDENTITY
+    fields:
+        itemname:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+            column: itemName
+    lifecycleCallbacks: {  }

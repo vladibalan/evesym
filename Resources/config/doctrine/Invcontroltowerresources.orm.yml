@@ -1,0 +1,71 @@
+Vibs\EvesymBundle\Entity\Invcontroltowerresources:
+    type: entity
+    table: invControlTowerResources
+    indexes:
+        controlTowerTypeID:
+            columns:
+                - controlTowerTypeID
+        factionID:
+            columns:
+                - factionID
+        resourceTypeID:
+            columns:
+                - resourceTypeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        purpose:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        quantity:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        minsecuritylevel:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: minSecurityLevel
+    manyToOne:
+        controltowertypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                controlTowerTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        resourcetypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                resourceTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        factionid:
+            targetEntity: Chrfactions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                factionID:
+                    referencedColumnName: factionID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

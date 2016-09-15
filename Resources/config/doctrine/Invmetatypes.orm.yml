@@ -1,0 +1,44 @@
+Vibs\EvesymBundle\Entity\Invmetatypes:
+    type: entity
+    table: invMetaTypes
+    indexes:
+        parentTypeID:
+            columns:
+                - parentTypeID
+        metaGroupID:
+            columns:
+                - metaGroupID
+    id: {  }
+    oneToOne:
+        typeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                typeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    manyToOne:
+        parenttypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                parentTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+        metagroupid:
+            targetEntity: Invmetagroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                metaGroupID:
+                    referencedColumnName: metaGroupID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

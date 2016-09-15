@@ -1,0 +1,115 @@
+Vibs\EvesymBundle\Entity\Mapcelestialstatistics:
+    type: entity
+    table: mapCelestialStatistics
+    id:
+        celestialid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: celestialID
+            generator:
+                strategy: IDENTITY
+    fields:
+        temperature:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        spectralclass:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: spectralClass
+        luminosity:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        age:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        life:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        orbitradius:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: orbitRadius
+        eccentricity:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        massdust:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: massDust
+        massgas:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: massGas
+        fragmented:
+            type: boolean
+            nullable: true
+        density:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        surfacegravity:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: surfaceGravity
+        escapevelocity:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: escapeVelocity
+        orbitperiod:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: orbitPeriod
+        rotationrate:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: rotationRate
+        locked:
+            type: boolean
+            nullable: true
+        pressure:
+            type: bigint
+            nullable: true
+            options:
+                unsigned: false
+        radius:
+            type: bigint
+            nullable: true
+            options:
+                unsigned: false
+        mass:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

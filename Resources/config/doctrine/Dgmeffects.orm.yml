@@ -1,0 +1,228 @@
+Vibs\EvesymBundle\Entity\Dgmeffects:
+    type: entity
+    table: dgmEffects
+    indexes:
+        iconID:
+            columns:
+                - iconID
+        durationAttributeID:
+            columns:
+                - durationAttributeID
+        trackingSpeedAttributeID:
+            columns:
+                - trackingSpeedAttributeID
+        dischargeAttributeID:
+            columns:
+                - dischargeAttributeID
+        rangeAttributeID:
+            columns:
+                - rangeAttributeID
+        falloffAttributeID:
+            columns:
+                - falloffAttributeID
+        npcUsageChanceAttributeID:
+            columns:
+                - npcUsageChanceAttributeID
+        npcActivationChanceAttributeID:
+            columns:
+                - npcActivationChanceAttributeID
+        fittingUsageChanceAttributeID:
+            columns:
+                - fittingUsageChanceAttributeID
+    id:
+        effectid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: effectID
+            generator:
+                strategy: IDENTITY
+    fields:
+        effectname:
+            type: string
+            nullable: true
+            length: 400
+            options:
+                fixed: false
+            column: effectName
+        effectcategory:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: effectCategory
+        preexpression:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: preExpression
+        postexpression:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: postExpression
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+        guid:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+        isoffensive:
+            type: boolean
+            nullable: true
+            column: isOffensive
+        isassistance:
+            type: boolean
+            nullable: true
+            column: isAssistance
+        disallowautorepeat:
+            type: boolean
+            nullable: true
+            column: disallowAutoRepeat
+        published:
+            type: boolean
+            nullable: true
+        displayname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: displayName
+        iswarpsafe:
+            type: boolean
+            nullable: true
+            column: isWarpSafe
+        rangechance:
+            type: boolean
+            nullable: true
+            column: rangeChance
+        electronicchance:
+            type: boolean
+            nullable: true
+            column: electronicChance
+        propulsionchance:
+            type: boolean
+            nullable: true
+            column: propulsionChance
+        distribution:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        sfxname:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: sfxName
+        modifierinfo:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: modifierInfo
+    manyToOne:
+        iconid:
+            targetEntity: Eveicons
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iconID:
+                    referencedColumnName: iconID
+            orphanRemoval: false
+        durationattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                durationAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        trackingspeedattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                trackingSpeedAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        dischargeattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dischargeAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        rangeattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                rangeAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        falloffattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                falloffAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        npcusagechanceattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                npcUsageChanceAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        npcactivationchanceattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                npcActivationChanceAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+        fittingusagechanceattributeid:
+            targetEntity: Dgmattributetypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fittingUsageChanceAttributeID:
+                    referencedColumnName: attributeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

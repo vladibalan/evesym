@@ -1,0 +1,37 @@
+Vibs\EvesymBundle\Entity\Skinlicense:
+    type: entity
+    table: skinLicense
+    indexes:
+        skinID:
+            columns:
+                - skinID
+    id: {  }
+    fields:
+        duration:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    oneToOne:
+        licensetypeid:
+            targetEntity: Invtypes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                licenseTypeID:
+                    referencedColumnName: typeID
+            orphanRemoval: false
+    manyToOne:
+        skinid:
+            targetEntity: Skins
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                skinID:
+                    referencedColumnName: skinID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

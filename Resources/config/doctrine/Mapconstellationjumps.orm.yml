@@ -1,0 +1,67 @@
+Vibs\EvesymBundle\Entity\Mapconstellationjumps:
+    type: entity
+    table: mapConstellationJumps
+    indexes:
+        fromConstellationID:
+            columns:
+                - fromConstellationID
+        fromRegionID:
+            columns:
+                - fromRegionID
+        toRegionID:
+            columns:
+                - toRegionID
+        toConstellationID:
+            columns:
+                - toConstellationID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        fromregionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fromRegionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        toregionid:
+            targetEntity: Mapregions
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                toRegionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        fromconstellationid:
+            targetEntity: Mapconstellations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fromConstellationID:
+                    referencedColumnName: constellationID
+            orphanRemoval: false
+        toconstellationid:
+            targetEntity: Mapconstellations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                toConstellationID:
+                    referencedColumnName: constellationID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

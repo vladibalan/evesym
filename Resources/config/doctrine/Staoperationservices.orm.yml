@@ -1,0 +1,41 @@
+Vibs\EvesymBundle\Entity\Staoperationservices:
+    type: entity
+    table: staOperationServices
+    indexes:
+        operationID:
+            columns:
+                - operationID
+        serviceID:
+            columns:
+                - serviceID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        operationid:
+            targetEntity: Staoperations
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                operationID:
+                    referencedColumnName: operationID
+            orphanRemoval: false
+        serviceid:
+            targetEntity: Staservices
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                serviceID:
+                    referencedColumnName: serviceID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,35 @@
+Vibs\EvesymBundle\Entity\Eveunits:
+    type: entity
+    table: eveUnits
+    id:
+        unitid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: unitID
+            generator:
+                strategy: IDENTITY
+    fields:
+        unitname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: unitName
+        displayname:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: displayName
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
