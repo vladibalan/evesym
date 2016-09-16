@@ -21,10 +21,6 @@
     },
     "target-dir" : "Vibs/EvesymBundle",
     "repositories" : [{
-    }],
-    "extra" : {
-    "branch-alias" : {
-            "dev-master" : "0.1"
-        }
-    }
+    }]
+    
 }
