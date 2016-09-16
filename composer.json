@@ -2,7 +2,6 @@
 	"name": "vibs/evesym",
 	"description" : "Eve Online doctrine entities",
     "type" : "symfony-bundle",
-	"version":"1.0.0-dev",
     "authors" : [{
         "name" : "vlad-Iulian Balan",
         "email" : "vladibalan@yahoo.com"
@@ -23,5 +22,4 @@
     "target-dir" : "Vibs/EvesymBundle",
     "repositories" : [{
     }]
-    
 }
