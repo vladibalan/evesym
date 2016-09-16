@@ -1,3 +1,7 @@
+-----------------------------------------------------------------------------
+For content related to EVE Online (https://www.eveonline.com/)
+Copyright (c) CCP hf. (https://www.ccpgames.com/) 
+-----------------------------------------------------------------------------
 EVE Online and the EVE logo are the registered trademarks of CCP hf. 
 All rights are reserved worldwide. All other trademarks are the property of 
 their respective owners. EVE Online, the EVE logo, EVE and all associated logos 
@@ -12,7 +16,9 @@ from the use of this website.
 The MIT License (MIT)
 applies to:
 - Symfony Standard Edition, Copyright (c) Fabien Potencier
-- Doctrine Project, Copyright (c) Doctrine Project 
+  http://symfony.com/
+- Doctrine Project, Copyright (c) Doctrine Project
+  http://www.doctrine-project.org/
 -----------------------------------------------------------------------------
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
