@@ -70,5 +70,158 @@ class Invcontrabandtypes
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set standingloss
+     *
+     * @param float $standingloss
+     *
+     * @return Invcontrabandtypes
+     */
+    public function setStandingloss($standingloss)
+    {
+        $this->standingloss = $standingloss;
+
+        return $this;
+    }
+
+    /**
+     * Get standingloss
+     *
+     * @return float
+     */
+    public function getStandingloss()
+    {
+        return $this->standingloss;
+    }
+
+    /**
+     * Set confiscateminsec
+     *
+     * @param float $confiscateminsec
+     *
+     * @return Invcontrabandtypes
+     */
+    public function setConfiscateminsec($confiscateminsec)
+    {
+        $this->confiscateminsec = $confiscateminsec;
+
+        return $this;
+    }
+
+    /**
+     * Get confiscateminsec
+     *
+     * @return float
+     */
+    public function getConfiscateminsec()
+    {
+        return $this->confiscateminsec;
+    }
+
+    /**
+     * Set finebyvalue
+     *
+     * @param float $finebyvalue
+     *
+     * @return Invcontrabandtypes
+     */
+    public function setFinebyvalue($finebyvalue)
+    {
+        $this->finebyvalue = $finebyvalue;
+
+        return $this;
+    }
+
+    /**
+     * Get finebyvalue
+     *
+     * @return float
+     */
+    public function getFinebyvalue()
+    {
+        return $this->finebyvalue;
+    }
+
+    /**
+     * Set attackminsec
+     *
+     * @param float $attackminsec
+     *
+     * @return Invcontrabandtypes
+     */
+    public function setAttackminsec($attackminsec)
+    {
+        $this->attackminsec = $attackminsec;
+
+        return $this;
+    }
+
+    /**
+     * Get attackminsec
+     *
+     * @return float
+     */
+    public function getAttackminsec()
+    {
+        return $this->attackminsec;
+    }
+
+    /**
+     * Set factionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Chrfactions $factionid
+     *
+     * @return Invcontrabandtypes
+     */
+    public function setFactionid(\Vibs\EvesymBundle\Entity\Chrfactions $factionid = null)
+    {
+        $this->factionid = $factionid;
+
+        return $this;
+    }
+
+    /**
+     * Get factionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Chrfactions
+     */
+    public function getFactionid()
+    {
+        return $this->factionid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Invcontrabandtypes
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

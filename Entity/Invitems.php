@@ -70,5 +70,148 @@ class Invitems
     private $ownerid;
 
 
-}
 
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Invitems
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set itemid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invnames $itemid
+     *
+     * @return Invitems
+     */
+    public function setItemid(\Vibs\EvesymBundle\Entity\Invnames $itemid = null)
+    {
+        $this->itemid = $itemid;
+
+        return $this;
+    }
+
+    /**
+     * Get itemid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invnames
+     */
+    public function getItemid()
+    {
+        return $this->itemid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Invitems
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set flagid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invflags $flagid
+     *
+     * @return Invitems
+     */
+    public function setFlagid(\Vibs\EvesymBundle\Entity\Invflags $flagid = null)
+    {
+        $this->flagid = $flagid;
+
+        return $this;
+    }
+
+    /**
+     * Get flagid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invflags
+     */
+    public function getFlagid()
+    {
+        return $this->flagid;
+    }
+
+    /**
+     * Set locationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invnames $locationid
+     *
+     * @return Invitems
+     */
+    public function setLocationid(\Vibs\EvesymBundle\Entity\Invnames $locationid = null)
+    {
+        $this->locationid = $locationid;
+
+        return $this;
+    }
+
+    /**
+     * Get locationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invnames
+     */
+    public function getLocationid()
+    {
+        return $this->locationid;
+    }
+
+    /**
+     * Set ownerid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invnames $ownerid
+     *
+     * @return Invitems
+     */
+    public function setOwnerid(\Vibs\EvesymBundle\Entity\Invnames $ownerid = null)
+    {
+        $this->ownerid = $ownerid;
+
+        return $this;
+    }
+
+    /**
+     * Get ownerid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invnames
+     */
+    public function getOwnerid()
+    {
+        return $this->ownerid;
+    }
+}

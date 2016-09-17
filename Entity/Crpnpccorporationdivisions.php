@@ -49,5 +49,86 @@ class Crpnpccorporationdivisions
     private $divisionid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set size
+     *
+     * @param integer $size
+     *
+     * @return Crpnpccorporationdivisions
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+
+        return $this;
+    }
+
+    /**
+     * Get size
+     *
+     * @return integer
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set corporationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid
+     *
+     * @return Crpnpccorporationdivisions
+     */
+    public function setCorporationid(\Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid = null)
+    {
+        $this->corporationid = $corporationid;
+
+        return $this;
+    }
+
+    /**
+     * Get corporationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Crpnpccorporations
+     */
+    public function getCorporationid()
+    {
+        return $this->corporationid;
+    }
+
+    /**
+     * Set divisionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Crpnpcdivisions $divisionid
+     *
+     * @return Crpnpccorporationdivisions
+     */
+    public function setDivisionid(\Vibs\EvesymBundle\Entity\Crpnpcdivisions $divisionid = null)
+    {
+        $this->divisionid = $divisionid;
+
+        return $this;
+    }
+
+    /**
+     * Get divisionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Crpnpcdivisions
+     */
+    public function getDivisionid()
+    {
+        return $this->divisionid;
+    }
+}

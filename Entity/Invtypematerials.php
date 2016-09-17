@@ -49,5 +49,86 @@ class Invtypematerials
     private $materialtypeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Invtypematerials
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Invtypematerials
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set materialtypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $materialtypeid
+     *
+     * @return Invtypematerials
+     */
+    public function setMaterialtypeid(\Vibs\EvesymBundle\Entity\Invtypes $materialtypeid = null)
+    {
+        $this->materialtypeid = $materialtypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get materialtypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getMaterialtypeid()
+    {
+        return $this->materialtypeid;
+    }
+}

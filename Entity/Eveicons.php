@@ -36,5 +36,62 @@ class Eveicons
     private $description;
 
 
-}
 
+    /**
+     * Get iconid
+     *
+     * @return integer
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+
+    /**
+     * Set iconfile
+     *
+     * @param string $iconfile
+     *
+     * @return Eveicons
+     */
+    public function setIconfile($iconfile)
+    {
+        $this->iconfile = $iconfile;
+
+        return $this;
+    }
+
+    /**
+     * Get iconfile
+     *
+     * @return string
+     */
+    public function getIconfile()
+    {
+        return $this->iconfile;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Eveicons
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}

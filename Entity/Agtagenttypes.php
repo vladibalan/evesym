@@ -29,5 +29,38 @@ class Agtagenttypes
     private $agenttype;
 
 
-}
 
+    /**
+     * Get agenttypeid
+     *
+     * @return integer
+     */
+    public function getAgenttypeid()
+    {
+        return $this->agenttypeid;
+    }
+
+    /**
+     * Set agenttype
+     *
+     * @param string $agenttype
+     *
+     * @return Agtagenttypes
+     */
+    public function setAgenttype($agenttype)
+    {
+        $this->agenttype = $agenttype;
+
+        return $this;
+    }
+
+    /**
+     * Get agenttype
+     *
+     * @return string
+     */
+    public function getAgenttype()
+    {
+        return $this->agenttype;
+    }
+}

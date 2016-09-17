@@ -33,5 +33,52 @@ class Maplocationscenes
     private $graphicid;
 
 
-}
 
+    /**
+     * Set locationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapregions $locationid
+     *
+     * @return Maplocationscenes
+     */
+    public function setLocationid(\Vibs\EvesymBundle\Entity\Mapregions $locationid = null)
+    {
+        $this->locationid = $locationid;
+
+        return $this;
+    }
+
+    /**
+     * Get locationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapregions
+     */
+    public function getLocationid()
+    {
+        return $this->locationid;
+    }
+
+    /**
+     * Set graphicid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Evegraphics $graphicid
+     *
+     * @return Maplocationscenes
+     */
+    public function setGraphicid(\Vibs\EvesymBundle\Entity\Evegraphics $graphicid = null)
+    {
+        $this->graphicid = $graphicid;
+
+        return $this;
+    }
+
+    /**
+     * Get graphicid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Evegraphics
+     */
+    public function getGraphicid()
+    {
+        return $this->graphicid;
+    }
+}

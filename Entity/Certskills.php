@@ -63,5 +63,134 @@ class Certskills
     private $certid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set certlevelint
+     *
+     * @param integer $certlevelint
+     *
+     * @return Certskills
+     */
+    public function setCertlevelint($certlevelint)
+    {
+        $this->certlevelint = $certlevelint;
+
+        return $this;
+    }
+
+    /**
+     * Get certlevelint
+     *
+     * @return integer
+     */
+    public function getCertlevelint()
+    {
+        return $this->certlevelint;
+    }
+
+    /**
+     * Set skilllevel
+     *
+     * @param integer $skilllevel
+     *
+     * @return Certskills
+     */
+    public function setSkilllevel($skilllevel)
+    {
+        $this->skilllevel = $skilllevel;
+
+        return $this;
+    }
+
+    /**
+     * Get skilllevel
+     *
+     * @return integer
+     */
+    public function getSkilllevel()
+    {
+        return $this->skilllevel;
+    }
+
+    /**
+     * Set certleveltext
+     *
+     * @param string $certleveltext
+     *
+     * @return Certskills
+     */
+    public function setCertleveltext($certleveltext)
+    {
+        $this->certleveltext = $certleveltext;
+
+        return $this;
+    }
+
+    /**
+     * Get certleveltext
+     *
+     * @return string
+     */
+    public function getCertleveltext()
+    {
+        return $this->certleveltext;
+    }
+
+    /**
+     * Set skillid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $skillid
+     *
+     * @return Certskills
+     */
+    public function setSkillid(\Vibs\EvesymBundle\Entity\Invtypes $skillid = null)
+    {
+        $this->skillid = $skillid;
+
+        return $this;
+    }
+
+    /**
+     * Get skillid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getSkillid()
+    {
+        return $this->skillid;
+    }
+
+    /**
+     * Set certid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Certcerts $certid
+     *
+     * @return Certskills
+     */
+    public function setCertid(\Vibs\EvesymBundle\Entity\Certcerts $certid = null)
+    {
+        $this->certid = $certid;
+
+        return $this;
+    }
+
+    /**
+     * Get certid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Certcerts
+     */
+    public function getCertid()
+    {
+        return $this->certid;
+    }
+}

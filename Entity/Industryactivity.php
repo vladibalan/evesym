@@ -49,5 +49,86 @@ class Industryactivity
     private $activityid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set time
+     *
+     * @param integer $time
+     *
+     * @return Industryactivity
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return integer
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Industryactivity
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set activityid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Ramactivities $activityid
+     *
+     * @return Industryactivity
+     */
+    public function setActivityid(\Vibs\EvesymBundle\Entity\Ramactivities $activityid = null)
+    {
+        $this->activityid = $activityid;
+
+        return $this;
+    }
+
+    /**
+     * Get activityid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Ramactivities
+     */
+    public function getActivityid()
+    {
+        return $this->activityid;
+    }
+}

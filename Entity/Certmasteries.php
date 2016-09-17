@@ -49,5 +49,86 @@ class Certmasteries
     private $certid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set masterylevel
+     *
+     * @param integer $masterylevel
+     *
+     * @return Certmasteries
+     */
+    public function setMasterylevel($masterylevel)
+    {
+        $this->masterylevel = $masterylevel;
+
+        return $this;
+    }
+
+    /**
+     * Get masterylevel
+     *
+     * @return integer
+     */
+    public function getMasterylevel()
+    {
+        return $this->masterylevel;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Certmasteries
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set certid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Certcerts $certid
+     *
+     * @return Certmasteries
+     */
+    public function setCertid(\Vibs\EvesymBundle\Entity\Certcerts $certid = null)
+    {
+        $this->certid = $certid;
+
+        return $this;
+    }
+
+    /**
+     * Get certid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Certcerts
+     */
+    public function getCertid()
+    {
+        return $this->certid;
+    }
+}

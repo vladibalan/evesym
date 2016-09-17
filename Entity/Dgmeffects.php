@@ -238,5 +238,662 @@ class Dgmeffects
     private $fittingusagechanceattributeid;
 
 
-}
 
+    /**
+     * Get effectid
+     *
+     * @return integer
+     */
+    public function getEffectid()
+    {
+        return $this->effectid;
+    }
+
+    /**
+     * Set effectname
+     *
+     * @param string $effectname
+     *
+     * @return Dgmeffects
+     */
+    public function setEffectname($effectname)
+    {
+        $this->effectname = $effectname;
+
+        return $this;
+    }
+
+    /**
+     * Get effectname
+     *
+     * @return string
+     */
+    public function getEffectname()
+    {
+        return $this->effectname;
+    }
+
+    /**
+     * Set effectcategory
+     *
+     * @param integer $effectcategory
+     *
+     * @return Dgmeffects
+     */
+    public function setEffectcategory($effectcategory)
+    {
+        $this->effectcategory = $effectcategory;
+
+        return $this;
+    }
+
+    /**
+     * Get effectcategory
+     *
+     * @return integer
+     */
+    public function getEffectcategory()
+    {
+        return $this->effectcategory;
+    }
+
+    /**
+     * Set preexpression
+     *
+     * @param integer $preexpression
+     *
+     * @return Dgmeffects
+     */
+    public function setPreexpression($preexpression)
+    {
+        $this->preexpression = $preexpression;
+
+        return $this;
+    }
+
+    /**
+     * Get preexpression
+     *
+     * @return integer
+     */
+    public function getPreexpression()
+    {
+        return $this->preexpression;
+    }
+
+    /**
+     * Set postexpression
+     *
+     * @param integer $postexpression
+     *
+     * @return Dgmeffects
+     */
+    public function setPostexpression($postexpression)
+    {
+        $this->postexpression = $postexpression;
+
+        return $this;
+    }
+
+    /**
+     * Get postexpression
+     *
+     * @return integer
+     */
+    public function getPostexpression()
+    {
+        return $this->postexpression;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Dgmeffects
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set guid
+     *
+     * @param string $guid
+     *
+     * @return Dgmeffects
+     */
+    public function setGuid($guid)
+    {
+        $this->guid = $guid;
+
+        return $this;
+    }
+
+    /**
+     * Get guid
+     *
+     * @return string
+     */
+    public function getGuid()
+    {
+        return $this->guid;
+    }
+
+    /**
+     * Set isoffensive
+     *
+     * @param boolean $isoffensive
+     *
+     * @return Dgmeffects
+     */
+    public function setIsoffensive($isoffensive)
+    {
+        $this->isoffensive = $isoffensive;
+
+        return $this;
+    }
+
+    /**
+     * Get isoffensive
+     *
+     * @return boolean
+     */
+    public function getIsoffensive()
+    {
+        return $this->isoffensive;
+    }
+
+    /**
+     * Set isassistance
+     *
+     * @param boolean $isassistance
+     *
+     * @return Dgmeffects
+     */
+    public function setIsassistance($isassistance)
+    {
+        $this->isassistance = $isassistance;
+
+        return $this;
+    }
+
+    /**
+     * Get isassistance
+     *
+     * @return boolean
+     */
+    public function getIsassistance()
+    {
+        return $this->isassistance;
+    }
+
+    /**
+     * Set disallowautorepeat
+     *
+     * @param boolean $disallowautorepeat
+     *
+     * @return Dgmeffects
+     */
+    public function setDisallowautorepeat($disallowautorepeat)
+    {
+        $this->disallowautorepeat = $disallowautorepeat;
+
+        return $this;
+    }
+
+    /**
+     * Get disallowautorepeat
+     *
+     * @return boolean
+     */
+    public function getDisallowautorepeat()
+    {
+        return $this->disallowautorepeat;
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     *
+     * @return Dgmeffects
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    /**
+     * Set displayname
+     *
+     * @param string $displayname
+     *
+     * @return Dgmeffects
+     */
+    public function setDisplayname($displayname)
+    {
+        $this->displayname = $displayname;
+
+        return $this;
+    }
+
+    /**
+     * Get displayname
+     *
+     * @return string
+     */
+    public function getDisplayname()
+    {
+        return $this->displayname;
+    }
+
+    /**
+     * Set iswarpsafe
+     *
+     * @param boolean $iswarpsafe
+     *
+     * @return Dgmeffects
+     */
+    public function setIswarpsafe($iswarpsafe)
+    {
+        $this->iswarpsafe = $iswarpsafe;
+
+        return $this;
+    }
+
+    /**
+     * Get iswarpsafe
+     *
+     * @return boolean
+     */
+    public function getIswarpsafe()
+    {
+        return $this->iswarpsafe;
+    }
+
+    /**
+     * Set rangechance
+     *
+     * @param boolean $rangechance
+     *
+     * @return Dgmeffects
+     */
+    public function setRangechance($rangechance)
+    {
+        $this->rangechance = $rangechance;
+
+        return $this;
+    }
+
+    /**
+     * Get rangechance
+     *
+     * @return boolean
+     */
+    public function getRangechance()
+    {
+        return $this->rangechance;
+    }
+
+    /**
+     * Set electronicchance
+     *
+     * @param boolean $electronicchance
+     *
+     * @return Dgmeffects
+     */
+    public function setElectronicchance($electronicchance)
+    {
+        $this->electronicchance = $electronicchance;
+
+        return $this;
+    }
+
+    /**
+     * Get electronicchance
+     *
+     * @return boolean
+     */
+    public function getElectronicchance()
+    {
+        return $this->electronicchance;
+    }
+
+    /**
+     * Set propulsionchance
+     *
+     * @param boolean $propulsionchance
+     *
+     * @return Dgmeffects
+     */
+    public function setPropulsionchance($propulsionchance)
+    {
+        $this->propulsionchance = $propulsionchance;
+
+        return $this;
+    }
+
+    /**
+     * Get propulsionchance
+     *
+     * @return boolean
+     */
+    public function getPropulsionchance()
+    {
+        return $this->propulsionchance;
+    }
+
+    /**
+     * Set distribution
+     *
+     * @param integer $distribution
+     *
+     * @return Dgmeffects
+     */
+    public function setDistribution($distribution)
+    {
+        $this->distribution = $distribution;
+
+        return $this;
+    }
+
+    /**
+     * Get distribution
+     *
+     * @return integer
+     */
+    public function getDistribution()
+    {
+        return $this->distribution;
+    }
+
+    /**
+     * Set sfxname
+     *
+     * @param string $sfxname
+     *
+     * @return Dgmeffects
+     */
+    public function setSfxname($sfxname)
+    {
+        $this->sfxname = $sfxname;
+
+        return $this;
+    }
+
+    /**
+     * Get sfxname
+     *
+     * @return string
+     */
+    public function getSfxname()
+    {
+        return $this->sfxname;
+    }
+
+    /**
+     * Set modifierinfo
+     *
+     * @param string $modifierinfo
+     *
+     * @return Dgmeffects
+     */
+    public function setModifierinfo($modifierinfo)
+    {
+        $this->modifierinfo = $modifierinfo;
+
+        return $this;
+    }
+
+    /**
+     * Get modifierinfo
+     *
+     * @return string
+     */
+    public function getModifierinfo()
+    {
+        return $this->modifierinfo;
+    }
+
+    /**
+     * Set iconid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Eveicons $iconid
+     *
+     * @return Dgmeffects
+     */
+    public function setIconid(\Vibs\EvesymBundle\Entity\Eveicons $iconid = null)
+    {
+        $this->iconid = $iconid;
+
+        return $this;
+    }
+
+    /**
+     * Get iconid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Eveicons
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+
+    /**
+     * Set durationattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $durationattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setDurationattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $durationattributeid = null)
+    {
+        $this->durationattributeid = $durationattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get durationattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getDurationattributeid()
+    {
+        return $this->durationattributeid;
+    }
+
+    /**
+     * Set trackingspeedattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $trackingspeedattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setTrackingspeedattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $trackingspeedattributeid = null)
+    {
+        $this->trackingspeedattributeid = $trackingspeedattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get trackingspeedattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getTrackingspeedattributeid()
+    {
+        return $this->trackingspeedattributeid;
+    }
+
+    /**
+     * Set dischargeattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $dischargeattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setDischargeattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $dischargeattributeid = null)
+    {
+        $this->dischargeattributeid = $dischargeattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get dischargeattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getDischargeattributeid()
+    {
+        return $this->dischargeattributeid;
+    }
+
+    /**
+     * Set rangeattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $rangeattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setRangeattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $rangeattributeid = null)
+    {
+        $this->rangeattributeid = $rangeattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get rangeattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getRangeattributeid()
+    {
+        return $this->rangeattributeid;
+    }
+
+    /**
+     * Set falloffattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $falloffattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setFalloffattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $falloffattributeid = null)
+    {
+        $this->falloffattributeid = $falloffattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get falloffattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getFalloffattributeid()
+    {
+        return $this->falloffattributeid;
+    }
+
+    /**
+     * Set npcusagechanceattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $npcusagechanceattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setNpcusagechanceattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $npcusagechanceattributeid = null)
+    {
+        $this->npcusagechanceattributeid = $npcusagechanceattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get npcusagechanceattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getNpcusagechanceattributeid()
+    {
+        return $this->npcusagechanceattributeid;
+    }
+
+    /**
+     * Set npcactivationchanceattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $npcactivationchanceattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setNpcactivationchanceattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $npcactivationchanceattributeid = null)
+    {
+        $this->npcactivationchanceattributeid = $npcactivationchanceattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get npcactivationchanceattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getNpcactivationchanceattributeid()
+    {
+        return $this->npcactivationchanceattributeid;
+    }
+
+    /**
+     * Set fittingusagechanceattributeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Dgmattributetypes $fittingusagechanceattributeid
+     *
+     * @return Dgmeffects
+     */
+    public function setFittingusagechanceattributeid(\Vibs\EvesymBundle\Entity\Dgmattributetypes $fittingusagechanceattributeid = null)
+    {
+        $this->fittingusagechanceattributeid = $fittingusagechanceattributeid;
+
+        return $this;
+    }
+
+    /**
+     * Get fittingusagechanceattributeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Dgmattributetypes
+     */
+    public function getFittingusagechanceattributeid()
+    {
+        return $this->fittingusagechanceattributeid;
+    }
+}

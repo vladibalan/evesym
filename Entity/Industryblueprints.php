@@ -30,5 +30,52 @@ class Industryblueprints
     private $typeid;
 
 
-}
 
+    /**
+     * Set maxproductionlimit
+     *
+     * @param integer $maxproductionlimit
+     *
+     * @return Industryblueprints
+     */
+    public function setMaxproductionlimit($maxproductionlimit)
+    {
+        $this->maxproductionlimit = $maxproductionlimit;
+
+        return $this;
+    }
+
+    /**
+     * Get maxproductionlimit
+     *
+     * @return integer
+     */
+    public function getMaxproductionlimit()
+    {
+        return $this->maxproductionlimit;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Industryblueprints
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

@@ -73,5 +73,158 @@ class Invcontroltowerresources
     private $factionid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set purpose
+     *
+     * @param integer $purpose
+     *
+     * @return Invcontroltowerresources
+     */
+    public function setPurpose($purpose)
+    {
+        $this->purpose = $purpose;
+
+        return $this;
+    }
+
+    /**
+     * Get purpose
+     *
+     * @return integer
+     */
+    public function getPurpose()
+    {
+        return $this->purpose;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Invcontroltowerresources
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set minsecuritylevel
+     *
+     * @param float $minsecuritylevel
+     *
+     * @return Invcontroltowerresources
+     */
+    public function setMinsecuritylevel($minsecuritylevel)
+    {
+        $this->minsecuritylevel = $minsecuritylevel;
+
+        return $this;
+    }
+
+    /**
+     * Get minsecuritylevel
+     *
+     * @return float
+     */
+    public function getMinsecuritylevel()
+    {
+        return $this->minsecuritylevel;
+    }
+
+    /**
+     * Set controltowertypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $controltowertypeid
+     *
+     * @return Invcontroltowerresources
+     */
+    public function setControltowertypeid(\Vibs\EvesymBundle\Entity\Invtypes $controltowertypeid = null)
+    {
+        $this->controltowertypeid = $controltowertypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get controltowertypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getControltowertypeid()
+    {
+        return $this->controltowertypeid;
+    }
+
+    /**
+     * Set resourcetypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $resourcetypeid
+     *
+     * @return Invcontroltowerresources
+     */
+    public function setResourcetypeid(\Vibs\EvesymBundle\Entity\Invtypes $resourcetypeid = null)
+    {
+        $this->resourcetypeid = $resourcetypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get resourcetypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getResourcetypeid()
+    {
+        return $this->resourcetypeid;
+    }
+
+    /**
+     * Set factionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Chrfactions $factionid
+     *
+     * @return Invcontroltowerresources
+     */
+    public function setFactionid(\Vibs\EvesymBundle\Entity\Chrfactions $factionid = null)
+    {
+        $this->factionid = $factionid;
+
+        return $this;
+    }
+
+    /**
+     * Get factionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Chrfactions
+     */
+    public function getFactionid()
+    {
+        return $this->factionid;
+    }
+}

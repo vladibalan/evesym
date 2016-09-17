@@ -43,5 +43,86 @@ class Eveunits
     private $description;
 
 
-}
 
+    /**
+     * Get unitid
+     *
+     * @return integer
+     */
+    public function getUnitid()
+    {
+        return $this->unitid;
+    }
+
+    /**
+     * Set unitname
+     *
+     * @param string $unitname
+     *
+     * @return Eveunits
+     */
+    public function setUnitname($unitname)
+    {
+        $this->unitname = $unitname;
+
+        return $this;
+    }
+
+    /**
+     * Get unitname
+     *
+     * @return string
+     */
+    public function getUnitname()
+    {
+        return $this->unitname;
+    }
+
+    /**
+     * Set displayname
+     *
+     * @param string $displayname
+     *
+     * @return Eveunits
+     */
+    public function setDisplayname($displayname)
+    {
+        $this->displayname = $displayname;
+
+        return $this;
+    }
+
+    /**
+     * Get displayname
+     *
+     * @return string
+     */
+    public function getDisplayname()
+    {
+        return $this->displayname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Eveunits
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}

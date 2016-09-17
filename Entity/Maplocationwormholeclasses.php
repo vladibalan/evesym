@@ -29,5 +29,38 @@ class Maplocationwormholeclasses
     private $wormholeclassid;
 
 
-}
 
+    /**
+     * Get locationid
+     *
+     * @return integer
+     */
+    public function getLocationid()
+    {
+        return $this->locationid;
+    }
+
+    /**
+     * Set wormholeclassid
+     *
+     * @param integer $wormholeclassid
+     *
+     * @return Maplocationwormholeclasses
+     */
+    public function setWormholeclassid($wormholeclassid)
+    {
+        $this->wormholeclassid = $wormholeclassid;
+
+        return $this;
+    }
+
+    /**
+     * Get wormholeclassid
+     *
+     * @return integer
+     */
+    public function getWormholeclassid()
+    {
+        return $this->wormholeclassid;
+    }
+}

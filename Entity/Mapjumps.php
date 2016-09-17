@@ -29,5 +29,38 @@ class Mapjumps
     private $destinationid;
 
 
-}
 
+    /**
+     * Get stargateid
+     *
+     * @return integer
+     */
+    public function getStargateid()
+    {
+        return $this->stargateid;
+    }
+
+    /**
+     * Set destinationid
+     *
+     * @param integer $destinationid
+     *
+     * @return Mapjumps
+     */
+    public function setDestinationid($destinationid)
+    {
+        $this->destinationid = $destinationid;
+
+        return $this;
+    }
+
+    /**
+     * Get destinationid
+     *
+     * @return integer
+     */
+    public function getDestinationid()
+    {
+        return $this->destinationid;
+    }
+}

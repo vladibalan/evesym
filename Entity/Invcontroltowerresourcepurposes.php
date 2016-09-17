@@ -29,5 +29,38 @@ class Invcontroltowerresourcepurposes
     private $purposetext;
 
 
-}
 
+    /**
+     * Get purpose
+     *
+     * @return integer
+     */
+    public function getPurpose()
+    {
+        return $this->purpose;
+    }
+
+    /**
+     * Set purposetext
+     *
+     * @param string $purposetext
+     *
+     * @return Invcontroltowerresourcepurposes
+     */
+    public function setPurposetext($purposetext)
+    {
+        $this->purposetext = $purposetext;
+
+        return $this;
+    }
+
+    /**
+     * Get purposetext
+     *
+     * @return string
+     */
+    public function getPurposetext()
+    {
+        return $this->purposetext;
+    }
+}

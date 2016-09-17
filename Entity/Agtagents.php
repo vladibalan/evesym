@@ -80,5 +80,182 @@ class Agtagents
     private $corporationid;
 
 
-}
 
+    /**
+     * Get agentid
+     *
+     * @return integer
+     */
+    public function getAgentid()
+    {
+        return $this->agentid;
+    }
+
+    /**
+     * Set locationid
+     *
+     * @param integer $locationid
+     *
+     * @return Agtagents
+     */
+    public function setLocationid($locationid)
+    {
+        $this->locationid = $locationid;
+
+        return $this;
+    }
+
+    /**
+     * Get locationid
+     *
+     * @return integer
+     */
+    public function getLocationid()
+    {
+        return $this->locationid;
+    }
+
+    /**
+     * Set level
+     *
+     * @param integer $level
+     *
+     * @return Agtagents
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    /**
+     * Get level
+     *
+     * @return integer
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    /**
+     * Set quality
+     *
+     * @param integer $quality
+     *
+     * @return Agtagents
+     */
+    public function setQuality($quality)
+    {
+        $this->quality = $quality;
+
+        return $this;
+    }
+
+    /**
+     * Get quality
+     *
+     * @return integer
+     */
+    public function getQuality()
+    {
+        return $this->quality;
+    }
+
+    /**
+     * Set islocator
+     *
+     * @param boolean $islocator
+     *
+     * @return Agtagents
+     */
+    public function setIslocator($islocator)
+    {
+        $this->islocator = $islocator;
+
+        return $this;
+    }
+
+    /**
+     * Get islocator
+     *
+     * @return boolean
+     */
+    public function getIslocator()
+    {
+        return $this->islocator;
+    }
+
+    /**
+     * Set divisionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Crpnpcdivisions $divisionid
+     *
+     * @return Agtagents
+     */
+    public function setDivisionid(\Vibs\EvesymBundle\Entity\Crpnpcdivisions $divisionid = null)
+    {
+        $this->divisionid = $divisionid;
+
+        return $this;
+    }
+
+    /**
+     * Get divisionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Crpnpcdivisions
+     */
+    public function getDivisionid()
+    {
+        return $this->divisionid;
+    }
+
+    /**
+     * Set agenttypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Agtagenttypes $agenttypeid
+     *
+     * @return Agtagents
+     */
+    public function setAgenttypeid(\Vibs\EvesymBundle\Entity\Agtagenttypes $agenttypeid = null)
+    {
+        $this->agenttypeid = $agenttypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get agenttypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Agtagenttypes
+     */
+    public function getAgenttypeid()
+    {
+        return $this->agenttypeid;
+    }
+
+    /**
+     * Set corporationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid
+     *
+     * @return Agtagents
+     */
+    public function setCorporationid(\Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid = null)
+    {
+        $this->corporationid = $corporationid;
+
+        return $this;
+    }
+
+    /**
+     * Get corporationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Crpnpccorporations
+     */
+    public function getCorporationid()
+    {
+        return $this->corporationid;
+    }
+}

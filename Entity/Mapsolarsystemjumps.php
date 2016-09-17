@@ -82,5 +82,158 @@ class Mapsolarsystemjumps
     private $toregionid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set fromregionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapregions $fromregionid
+     *
+     * @return Mapsolarsystemjumps
+     */
+    public function setFromregionid(\Vibs\EvesymBundle\Entity\Mapregions $fromregionid = null)
+    {
+        $this->fromregionid = $fromregionid;
+
+        return $this;
+    }
+
+    /**
+     * Get fromregionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapregions
+     */
+    public function getFromregionid()
+    {
+        return $this->fromregionid;
+    }
+
+    /**
+     * Set fromconstellationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapconstellations $fromconstellationid
+     *
+     * @return Mapsolarsystemjumps
+     */
+    public function setFromconstellationid(\Vibs\EvesymBundle\Entity\Mapconstellations $fromconstellationid = null)
+    {
+        $this->fromconstellationid = $fromconstellationid;
+
+        return $this;
+    }
+
+    /**
+     * Get fromconstellationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapconstellations
+     */
+    public function getFromconstellationid()
+    {
+        return $this->fromconstellationid;
+    }
+
+    /**
+     * Set fromsolarsystemid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapsolarsystems $fromsolarsystemid
+     *
+     * @return Mapsolarsystemjumps
+     */
+    public function setFromsolarsystemid(\Vibs\EvesymBundle\Entity\Mapsolarsystems $fromsolarsystemid = null)
+    {
+        $this->fromsolarsystemid = $fromsolarsystemid;
+
+        return $this;
+    }
+
+    /**
+     * Get fromsolarsystemid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapsolarsystems
+     */
+    public function getFromsolarsystemid()
+    {
+        return $this->fromsolarsystemid;
+    }
+
+    /**
+     * Set tosolarsystemid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapsolarsystems $tosolarsystemid
+     *
+     * @return Mapsolarsystemjumps
+     */
+    public function setTosolarsystemid(\Vibs\EvesymBundle\Entity\Mapsolarsystems $tosolarsystemid = null)
+    {
+        $this->tosolarsystemid = $tosolarsystemid;
+
+        return $this;
+    }
+
+    /**
+     * Get tosolarsystemid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapsolarsystems
+     */
+    public function getTosolarsystemid()
+    {
+        return $this->tosolarsystemid;
+    }
+
+    /**
+     * Set toconstellationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapconstellations $toconstellationid
+     *
+     * @return Mapsolarsystemjumps
+     */
+    public function setToconstellationid(\Vibs\EvesymBundle\Entity\Mapconstellations $toconstellationid = null)
+    {
+        $this->toconstellationid = $toconstellationid;
+
+        return $this;
+    }
+
+    /**
+     * Get toconstellationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapconstellations
+     */
+    public function getToconstellationid()
+    {
+        return $this->toconstellationid;
+    }
+
+    /**
+     * Set toregionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapregions $toregionid
+     *
+     * @return Mapsolarsystemjumps
+     */
+    public function setToregionid(\Vibs\EvesymBundle\Entity\Mapregions $toregionid = null)
+    {
+        $this->toregionid = $toregionid;
+
+        return $this;
+    }
+
+    /**
+     * Get toregionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapregions
+     */
+    public function getToregionid()
+    {
+        return $this->toregionid;
+    }
+}

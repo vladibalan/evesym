@@ -42,5 +42,62 @@ class Skinship
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set skinid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Skins $skinid
+     *
+     * @return Skinship
+     */
+    public function setSkinid(\Vibs\EvesymBundle\Entity\Skins $skinid = null)
+    {
+        $this->skinid = $skinid;
+
+        return $this;
+    }
+
+    /**
+     * Get skinid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Skins
+     */
+    public function getSkinid()
+    {
+        return $this->skinid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Skinship
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

@@ -46,5 +46,86 @@ class Dgmtypeeffects
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set effectid
+     *
+     * @param integer $effectid
+     *
+     * @return Dgmtypeeffects
+     */
+    public function setEffectid($effectid)
+    {
+        $this->effectid = $effectid;
+
+        return $this;
+    }
+
+    /**
+     * Get effectid
+     *
+     * @return integer
+     */
+    public function getEffectid()
+    {
+        return $this->effectid;
+    }
+
+    /**
+     * Set isdefault
+     *
+     * @param boolean $isdefault
+     *
+     * @return Dgmtypeeffects
+     */
+    public function setIsdefault($isdefault)
+    {
+        $this->isdefault = $isdefault;
+
+        return $this;
+    }
+
+    /**
+     * Get isdefault
+     *
+     * @return boolean
+     */
+    public function getIsdefault()
+    {
+        return $this->isdefault;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Dgmtypeeffects
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

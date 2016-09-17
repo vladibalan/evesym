@@ -46,5 +46,86 @@ class Invcategories
     private $iconid;
 
 
-}
 
+    /**
+     * Get categoryid
+     *
+     * @return integer
+     */
+    public function getCategoryid()
+    {
+        return $this->categoryid;
+    }
+
+    /**
+     * Set categoryname
+     *
+     * @param string $categoryname
+     *
+     * @return Invcategories
+     */
+    public function setCategoryname($categoryname)
+    {
+        $this->categoryname = $categoryname;
+
+        return $this;
+    }
+
+    /**
+     * Get categoryname
+     *
+     * @return string
+     */
+    public function getCategoryname()
+    {
+        return $this->categoryname;
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     *
+     * @return Invcategories
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    /**
+     * Set iconid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Eveicons $iconid
+     *
+     * @return Invcategories
+     */
+    public function setIconid(\Vibs\EvesymBundle\Entity\Eveicons $iconid = null)
+    {
+        $this->iconid = $iconid;
+
+        return $this;
+    }
+
+    /**
+     * Get iconid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Eveicons
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+}

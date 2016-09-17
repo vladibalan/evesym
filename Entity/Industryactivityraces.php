@@ -59,5 +59,110 @@ class Industryactivityraces
     private $producttypeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set raceid
+     *
+     * @param integer $raceid
+     *
+     * @return Industryactivityraces
+     */
+    public function setRaceid($raceid)
+    {
+        $this->raceid = $raceid;
+
+        return $this;
+    }
+
+    /**
+     * Get raceid
+     *
+     * @return integer
+     */
+    public function getRaceid()
+    {
+        return $this->raceid;
+    }
+
+    /**
+     * Set activityid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Ramactivities $activityid
+     *
+     * @return Industryactivityraces
+     */
+    public function setActivityid(\Vibs\EvesymBundle\Entity\Ramactivities $activityid = null)
+    {
+        $this->activityid = $activityid;
+
+        return $this;
+    }
+
+    /**
+     * Get activityid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Ramactivities
+     */
+    public function getActivityid()
+    {
+        return $this->activityid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Industryactivityraces
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set producttypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $producttypeid
+     *
+     * @return Industryactivityraces
+     */
+    public function setProducttypeid(\Vibs\EvesymBundle\Entity\Invtypes $producttypeid = null)
+    {
+        $this->producttypeid = $producttypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get producttypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getProducttypeid()
+    {
+        return $this->producttypeid;
+    }
+}

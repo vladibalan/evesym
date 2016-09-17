@@ -59,5 +59,110 @@ class Industryactivityskills
     private $skillid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set level
+     *
+     * @param integer $level
+     *
+     * @return Industryactivityskills
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    /**
+     * Get level
+     *
+     * @return integer
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Industryactivityskills
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set activityid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Ramactivities $activityid
+     *
+     * @return Industryactivityskills
+     */
+    public function setActivityid(\Vibs\EvesymBundle\Entity\Ramactivities $activityid = null)
+    {
+        $this->activityid = $activityid;
+
+        return $this;
+    }
+
+    /**
+     * Get activityid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Ramactivities
+     */
+    public function getActivityid()
+    {
+        return $this->activityid;
+    }
+
+    /**
+     * Set skillid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $skillid
+     *
+     * @return Industryactivityskills
+     */
+    public function setSkillid(\Vibs\EvesymBundle\Entity\Invtypes $skillid = null)
+    {
+        $this->skillid = $skillid;
+
+        return $this;
+    }
+
+    /**
+     * Get skillid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getSkillid()
+    {
+        return $this->skillid;
+    }
+}

@@ -42,5 +42,62 @@ class Crpnpccorporationresearchfields
     private $corporationid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set skillid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $skillid
+     *
+     * @return Crpnpccorporationresearchfields
+     */
+    public function setSkillid(\Vibs\EvesymBundle\Entity\Invtypes $skillid = null)
+    {
+        $this->skillid = $skillid;
+
+        return $this;
+    }
+
+    /**
+     * Get skillid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getSkillid()
+    {
+        return $this->skillid;
+    }
+
+    /**
+     * Set corporationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid
+     *
+     * @return Crpnpccorporationresearchfields
+     */
+    public function setCorporationid(\Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid = null)
+    {
+        $this->corporationid = $corporationid;
+
+        return $this;
+    }
+
+    /**
+     * Get corporationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Crpnpccorporations
+     */
+    public function getCorporationid()
+    {
+        return $this->corporationid;
+    }
+}

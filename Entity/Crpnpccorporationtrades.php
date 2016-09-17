@@ -42,5 +42,62 @@ class Crpnpccorporationtrades
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set corporationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid
+     *
+     * @return Crpnpccorporationtrades
+     */
+    public function setCorporationid(\Vibs\EvesymBundle\Entity\Crpnpccorporations $corporationid = null)
+    {
+        $this->corporationid = $corporationid;
+
+        return $this;
+    }
+
+    /**
+     * Get corporationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Crpnpccorporations
+     */
+    public function getCorporationid()
+    {
+        return $this->corporationid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Crpnpccorporationtrades
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

@@ -56,5 +56,110 @@ class Invtypereactions
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set input
+     *
+     * @param boolean $input
+     *
+     * @return Invtypereactions
+     */
+    public function setInput($input)
+    {
+        $this->input = $input;
+
+        return $this;
+    }
+
+    /**
+     * Get input
+     *
+     * @return boolean
+     */
+    public function getInput()
+    {
+        return $this->input;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Invtypereactions
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set reactiontypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $reactiontypeid
+     *
+     * @return Invtypereactions
+     */
+    public function setReactiontypeid(\Vibs\EvesymBundle\Entity\Invtypes $reactiontypeid = null)
+    {
+        $this->reactiontypeid = $reactiontypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get reactiontypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getReactiontypeid()
+    {
+        return $this->reactiontypeid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Invtypereactions
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

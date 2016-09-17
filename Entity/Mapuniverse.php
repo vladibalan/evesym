@@ -99,5 +99,278 @@ class Mapuniverse
     private $radius;
 
 
-}
 
+    /**
+     * Get universeid
+     *
+     * @return integer
+     */
+    public function getUniverseid()
+    {
+        return $this->universeid;
+    }
+
+    /**
+     * Set universename
+     *
+     * @param string $universename
+     *
+     * @return Mapuniverse
+     */
+    public function setUniversename($universename)
+    {
+        $this->universename = $universename;
+
+        return $this;
+    }
+
+    /**
+     * Get universename
+     *
+     * @return string
+     */
+    public function getUniversename()
+    {
+        return $this->universename;
+    }
+
+    /**
+     * Set x
+     *
+     * @param float $x
+     *
+     * @return Mapuniverse
+     */
+    public function setX($x)
+    {
+        $this->x = $x;
+
+        return $this;
+    }
+
+    /**
+     * Get x
+     *
+     * @return float
+     */
+    public function getX()
+    {
+        return $this->x;
+    }
+
+    /**
+     * Set y
+     *
+     * @param float $y
+     *
+     * @return Mapuniverse
+     */
+    public function setY($y)
+    {
+        $this->y = $y;
+
+        return $this;
+    }
+
+    /**
+     * Get y
+     *
+     * @return float
+     */
+    public function getY()
+    {
+        return $this->y;
+    }
+
+    /**
+     * Set z
+     *
+     * @param float $z
+     *
+     * @return Mapuniverse
+     */
+    public function setZ($z)
+    {
+        $this->z = $z;
+
+        return $this;
+    }
+
+    /**
+     * Get z
+     *
+     * @return float
+     */
+    public function getZ()
+    {
+        return $this->z;
+    }
+
+    /**
+     * Set xmin
+     *
+     * @param float $xmin
+     *
+     * @return Mapuniverse
+     */
+    public function setXmin($xmin)
+    {
+        $this->xmin = $xmin;
+
+        return $this;
+    }
+
+    /**
+     * Get xmin
+     *
+     * @return float
+     */
+    public function getXmin()
+    {
+        return $this->xmin;
+    }
+
+    /**
+     * Set xmax
+     *
+     * @param float $xmax
+     *
+     * @return Mapuniverse
+     */
+    public function setXmax($xmax)
+    {
+        $this->xmax = $xmax;
+
+        return $this;
+    }
+
+    /**
+     * Get xmax
+     *
+     * @return float
+     */
+    public function getXmax()
+    {
+        return $this->xmax;
+    }
+
+    /**
+     * Set ymin
+     *
+     * @param float $ymin
+     *
+     * @return Mapuniverse
+     */
+    public function setYmin($ymin)
+    {
+        $this->ymin = $ymin;
+
+        return $this;
+    }
+
+    /**
+     * Get ymin
+     *
+     * @return float
+     */
+    public function getYmin()
+    {
+        return $this->ymin;
+    }
+
+    /**
+     * Set ymax
+     *
+     * @param float $ymax
+     *
+     * @return Mapuniverse
+     */
+    public function setYmax($ymax)
+    {
+        $this->ymax = $ymax;
+
+        return $this;
+    }
+
+    /**
+     * Get ymax
+     *
+     * @return float
+     */
+    public function getYmax()
+    {
+        return $this->ymax;
+    }
+
+    /**
+     * Set zmin
+     *
+     * @param float $zmin
+     *
+     * @return Mapuniverse
+     */
+    public function setZmin($zmin)
+    {
+        $this->zmin = $zmin;
+
+        return $this;
+    }
+
+    /**
+     * Get zmin
+     *
+     * @return float
+     */
+    public function getZmin()
+    {
+        return $this->zmin;
+    }
+
+    /**
+     * Set zmax
+     *
+     * @param float $zmax
+     *
+     * @return Mapuniverse
+     */
+    public function setZmax($zmax)
+    {
+        $this->zmax = $zmax;
+
+        return $this;
+    }
+
+    /**
+     * Get zmax
+     *
+     * @return float
+     */
+    public function getZmax()
+    {
+        return $this->zmax;
+    }
+
+    /**
+     * Set radius
+     *
+     * @param float $radius
+     *
+     * @return Mapuniverse
+     */
+    public function setRadius($radius)
+    {
+        $this->radius = $radius;
+
+        return $this;
+    }
+
+    /**
+     * Get radius
+     *
+     * @return float
+     */
+    public function getRadius()
+    {
+        return $this->radius;
+    }
+}

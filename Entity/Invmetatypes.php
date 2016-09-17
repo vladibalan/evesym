@@ -43,5 +43,76 @@ class Invmetatypes
     private $metagroupid;
 
 
-}
 
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Invmetatypes
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set parenttypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $parenttypeid
+     *
+     * @return Invmetatypes
+     */
+    public function setParenttypeid(\Vibs\EvesymBundle\Entity\Invtypes $parenttypeid = null)
+    {
+        $this->parenttypeid = $parenttypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get parenttypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getParenttypeid()
+    {
+        return $this->parenttypeid;
+    }
+
+    /**
+     * Set metagroupid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invmetagroups $metagroupid
+     *
+     * @return Invmetatypes
+     */
+    public function setMetagroupid(\Vibs\EvesymBundle\Entity\Invmetagroups $metagroupid = null)
+    {
+        $this->metagroupid = $metagroupid;
+
+        return $this;
+    }
+
+    /**
+     * Get metagroupid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invmetagroups
+     */
+    public function getMetagroupid()
+    {
+        return $this->metagroupid;
+    }
+}

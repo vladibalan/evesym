@@ -40,5 +40,76 @@ class Skinlicense
     private $skinid;
 
 
-}
 
+    /**
+     * Set duration
+     *
+     * @param integer $duration
+     *
+     * @return Skinlicense
+     */
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Get duration
+     *
+     * @return integer
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set licensetypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $licensetypeid
+     *
+     * @return Skinlicense
+     */
+    public function setLicensetypeid(\Vibs\EvesymBundle\Entity\Invtypes $licensetypeid = null)
+    {
+        $this->licensetypeid = $licensetypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get licensetypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getLicensetypeid()
+    {
+        return $this->licensetypeid;
+    }
+
+    /**
+     * Set skinid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Skins $skinid
+     *
+     * @return Skinlicense
+     */
+    public function setSkinid(\Vibs\EvesymBundle\Entity\Skins $skinid = null)
+    {
+        $this->skinid = $skinid;
+
+        return $this;
+    }
+
+    /**
+     * Get skinid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Skins
+     */
+    public function getSkinid()
+    {
+        return $this->skinid;
+    }
+}

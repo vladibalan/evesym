@@ -59,5 +59,110 @@ class Industryactivityprobabilities
     private $producttypeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set probability
+     *
+     * @param string $probability
+     *
+     * @return Industryactivityprobabilities
+     */
+    public function setProbability($probability)
+    {
+        $this->probability = $probability;
+
+        return $this;
+    }
+
+    /**
+     * Get probability
+     *
+     * @return string
+     */
+    public function getProbability()
+    {
+        return $this->probability;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Industryactivityprobabilities
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set activityid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Ramactivities $activityid
+     *
+     * @return Industryactivityprobabilities
+     */
+    public function setActivityid(\Vibs\EvesymBundle\Entity\Ramactivities $activityid = null)
+    {
+        $this->activityid = $activityid;
+
+        return $this;
+    }
+
+    /**
+     * Get activityid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Ramactivities
+     */
+    public function getActivityid()
+    {
+        return $this->activityid;
+    }
+
+    /**
+     * Set producttypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $producttypeid
+     *
+     * @return Industryactivityprobabilities
+     */
+    public function setProducttypeid(\Vibs\EvesymBundle\Entity\Invtypes $producttypeid = null)
+    {
+        $this->producttypeid = $producttypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get producttypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getProducttypeid()
+    {
+        return $this->producttypeid;
+    }
+}

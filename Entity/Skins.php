@@ -36,5 +36,62 @@ class Skins
     private $skinmaterialid;
 
 
-}
 
+    /**
+     * Get skinid
+     *
+     * @return integer
+     */
+    public function getSkinid()
+    {
+        return $this->skinid;
+    }
+
+    /**
+     * Set internalname
+     *
+     * @param string $internalname
+     *
+     * @return Skins
+     */
+    public function setInternalname($internalname)
+    {
+        $this->internalname = $internalname;
+
+        return $this;
+    }
+
+    /**
+     * Get internalname
+     *
+     * @return string
+     */
+    public function getInternalname()
+    {
+        return $this->internalname;
+    }
+
+    /**
+     * Set skinmaterialid
+     *
+     * @param integer $skinmaterialid
+     *
+     * @return Skins
+     */
+    public function setSkinmaterialid($skinmaterialid)
+    {
+        $this->skinmaterialid = $skinmaterialid;
+
+        return $this;
+    }
+
+    /**
+     * Get skinmaterialid
+     *
+     * @return integer
+     */
+    public function getSkinmaterialid()
+    {
+        return $this->skinmaterialid;
+    }
+}

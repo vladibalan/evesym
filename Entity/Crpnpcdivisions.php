@@ -43,5 +43,86 @@ class Crpnpcdivisions
     private $leadertype;
 
 
-}
 
+    /**
+     * Get divisionid
+     *
+     * @return integer
+     */
+    public function getDivisionid()
+    {
+        return $this->divisionid;
+    }
+
+    /**
+     * Set divisionname
+     *
+     * @param string $divisionname
+     *
+     * @return Crpnpcdivisions
+     */
+    public function setDivisionname($divisionname)
+    {
+        $this->divisionname = $divisionname;
+
+        return $this;
+    }
+
+    /**
+     * Get divisionname
+     *
+     * @return string
+     */
+    public function getDivisionname()
+    {
+        return $this->divisionname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Crpnpcdivisions
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set leadertype
+     *
+     * @param string $leadertype
+     *
+     * @return Crpnpcdivisions
+     */
+    public function setLeadertype($leadertype)
+    {
+        $this->leadertype = $leadertype;
+
+        return $this;
+    }
+
+    /**
+     * Get leadertype
+     *
+     * @return string
+     */
+    public function getLeadertype()
+    {
+        return $this->leadertype;
+    }
+}

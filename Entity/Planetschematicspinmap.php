@@ -42,5 +42,62 @@ class Planetschematicspinmap
     private $pintypeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set schematicid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Planetschematics $schematicid
+     *
+     * @return Planetschematicspinmap
+     */
+    public function setSchematicid(\Vibs\EvesymBundle\Entity\Planetschematics $schematicid = null)
+    {
+        $this->schematicid = $schematicid;
+
+        return $this;
+    }
+
+    /**
+     * Get schematicid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Planetschematics
+     */
+    public function getSchematicid()
+    {
+        return $this->schematicid;
+    }
+
+    /**
+     * Set pintypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $pintypeid
+     *
+     * @return Planetschematicspinmap
+     */
+    public function setPintypeid(\Vibs\EvesymBundle\Entity\Invtypes $pintypeid = null)
+    {
+        $this->pintypeid = $pintypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get pintypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getPintypeid()
+    {
+        return $this->pintypeid;
+    }
+}

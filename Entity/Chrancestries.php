@@ -98,5 +98,254 @@ class Chrancestries
     private $iconid;
 
 
-}
 
+    /**
+     * Get ancestryid
+     *
+     * @return integer
+     */
+    public function getAncestryid()
+    {
+        return $this->ancestryid;
+    }
+
+    /**
+     * Set ancestryname
+     *
+     * @param string $ancestryname
+     *
+     * @return Chrancestries
+     */
+    public function setAncestryname($ancestryname)
+    {
+        $this->ancestryname = $ancestryname;
+
+        return $this;
+    }
+
+    /**
+     * Get ancestryname
+     *
+     * @return string
+     */
+    public function getAncestryname()
+    {
+        return $this->ancestryname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Chrancestries
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set perception
+     *
+     * @param integer $perception
+     *
+     * @return Chrancestries
+     */
+    public function setPerception($perception)
+    {
+        $this->perception = $perception;
+
+        return $this;
+    }
+
+    /**
+     * Get perception
+     *
+     * @return integer
+     */
+    public function getPerception()
+    {
+        return $this->perception;
+    }
+
+    /**
+     * Set willpower
+     *
+     * @param integer $willpower
+     *
+     * @return Chrancestries
+     */
+    public function setWillpower($willpower)
+    {
+        $this->willpower = $willpower;
+
+        return $this;
+    }
+
+    /**
+     * Get willpower
+     *
+     * @return integer
+     */
+    public function getWillpower()
+    {
+        return $this->willpower;
+    }
+
+    /**
+     * Set charisma
+     *
+     * @param integer $charisma
+     *
+     * @return Chrancestries
+     */
+    public function setCharisma($charisma)
+    {
+        $this->charisma = $charisma;
+
+        return $this;
+    }
+
+    /**
+     * Get charisma
+     *
+     * @return integer
+     */
+    public function getCharisma()
+    {
+        return $this->charisma;
+    }
+
+    /**
+     * Set memory
+     *
+     * @param integer $memory
+     *
+     * @return Chrancestries
+     */
+    public function setMemory($memory)
+    {
+        $this->memory = $memory;
+
+        return $this;
+    }
+
+    /**
+     * Get memory
+     *
+     * @return integer
+     */
+    public function getMemory()
+    {
+        return $this->memory;
+    }
+
+    /**
+     * Set intelligence
+     *
+     * @param integer $intelligence
+     *
+     * @return Chrancestries
+     */
+    public function setIntelligence($intelligence)
+    {
+        $this->intelligence = $intelligence;
+
+        return $this;
+    }
+
+    /**
+     * Get intelligence
+     *
+     * @return integer
+     */
+    public function getIntelligence()
+    {
+        return $this->intelligence;
+    }
+
+    /**
+     * Set shortdescription
+     *
+     * @param string $shortdescription
+     *
+     * @return Chrancestries
+     */
+    public function setShortdescription($shortdescription)
+    {
+        $this->shortdescription = $shortdescription;
+
+        return $this;
+    }
+
+    /**
+     * Get shortdescription
+     *
+     * @return string
+     */
+    public function getShortdescription()
+    {
+        return $this->shortdescription;
+    }
+
+    /**
+     * Set bloodlineid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Chrbloodlines $bloodlineid
+     *
+     * @return Chrancestries
+     */
+    public function setBloodlineid(\Vibs\EvesymBundle\Entity\Chrbloodlines $bloodlineid = null)
+    {
+        $this->bloodlineid = $bloodlineid;
+
+        return $this;
+    }
+
+    /**
+     * Get bloodlineid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Chrbloodlines
+     */
+    public function getBloodlineid()
+    {
+        return $this->bloodlineid;
+    }
+
+    /**
+     * Set iconid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Eveicons $iconid
+     *
+     * @return Chrancestries
+     */
+    public function setIconid(\Vibs\EvesymBundle\Entity\Eveicons $iconid = null)
+    {
+        $this->iconid = $iconid;
+
+        return $this;
+    }
+
+    /**
+     * Get iconid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Eveicons
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+}

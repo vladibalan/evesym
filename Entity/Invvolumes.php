@@ -29,5 +29,38 @@ class Invvolumes
     private $volume;
 
 
-}
 
+    /**
+     * Get typeid
+     *
+     * @return integer
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set volume
+     *
+     * @param integer $volume
+     *
+     * @return Invvolumes
+     */
+    public function setVolume($volume)
+    {
+        $this->volume = $volume;
+
+        return $this;
+    }
+
+    /**
+     * Get volume
+     *
+     * @return integer
+     */
+    public function getVolume()
+    {
+        return $this->volume;
+    }
+}

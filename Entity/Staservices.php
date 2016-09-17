@@ -36,5 +36,62 @@ class Staservices
     private $description;
 
 
-}
 
+    /**
+     * Get serviceid
+     *
+     * @return integer
+     */
+    public function getServiceid()
+    {
+        return $this->serviceid;
+    }
+
+    /**
+     * Set servicename
+     *
+     * @param string $servicename
+     *
+     * @return Staservices
+     */
+    public function setServicename($servicename)
+    {
+        $this->servicename = $servicename;
+
+        return $this;
+    }
+
+    /**
+     * Get servicename
+     *
+     * @return string
+     */
+    public function getServicename()
+    {
+        return $this->servicename;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Staservices
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}

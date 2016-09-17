@@ -46,5 +46,86 @@ class Certcerts
     private $groupid;
 
 
-}
 
+    /**
+     * Get certid
+     *
+     * @return integer
+     */
+    public function getCertid()
+    {
+        return $this->certid;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Certcerts
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Certcerts
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set groupid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invgroups $groupid
+     *
+     * @return Certcerts
+     */
+    public function setGroupid(\Vibs\EvesymBundle\Entity\Invgroups $groupid = null)
+    {
+        $this->groupid = $groupid;
+
+        return $this;
+    }
+
+    /**
+     * Get groupid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invgroups
+     */
+    public function getGroupid()
+    {
+        return $this->groupid;
+    }
+}

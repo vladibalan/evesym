@@ -36,5 +36,62 @@ class Crpactivities
     private $description;
 
 
-}
 
+    /**
+     * Get activityid
+     *
+     * @return integer
+     */
+    public function getActivityid()
+    {
+        return $this->activityid;
+    }
+
+    /**
+     * Set activityname
+     *
+     * @param string $activityname
+     *
+     * @return Crpactivities
+     */
+    public function setActivityname($activityname)
+    {
+        $this->activityname = $activityname;
+
+        return $this;
+    }
+
+    /**
+     * Get activityname
+     *
+     * @return string
+     */
+    public function getActivityname()
+    {
+        return $this->activityname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Crpactivities
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}

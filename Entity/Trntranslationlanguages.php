@@ -36,5 +36,62 @@ class Trntranslationlanguages
     private $languagename;
 
 
-}
 
+    /**
+     * Get numericlanguageid
+     *
+     * @return integer
+     */
+    public function getNumericlanguageid()
+    {
+        return $this->numericlanguageid;
+    }
+
+    /**
+     * Set languageid
+     *
+     * @param string $languageid
+     *
+     * @return Trntranslationlanguages
+     */
+    public function setLanguageid($languageid)
+    {
+        $this->languageid = $languageid;
+
+        return $this;
+    }
+
+    /**
+     * Get languageid
+     *
+     * @return string
+     */
+    public function getLanguageid()
+    {
+        return $this->languageid;
+    }
+
+    /**
+     * Set languagename
+     *
+     * @param string $languagename
+     *
+     * @return Trntranslationlanguages
+     */
+    public function setLanguagename($languagename)
+    {
+        $this->languagename = $languagename;
+
+        return $this;
+    }
+
+    /**
+     * Get languagename
+     *
+     * @return string
+     */
+    public function getLanguagename()
+    {
+        return $this->languagename;
+    }
+}

@@ -63,5 +63,134 @@ class Ramassemblylinetypedetailpercategory
     private $categoryid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set timemultiplier
+     *
+     * @param float $timemultiplier
+     *
+     * @return Ramassemblylinetypedetailpercategory
+     */
+    public function setTimemultiplier($timemultiplier)
+    {
+        $this->timemultiplier = $timemultiplier;
+
+        return $this;
+    }
+
+    /**
+     * Get timemultiplier
+     *
+     * @return float
+     */
+    public function getTimemultiplier()
+    {
+        return $this->timemultiplier;
+    }
+
+    /**
+     * Set materialmultiplier
+     *
+     * @param float $materialmultiplier
+     *
+     * @return Ramassemblylinetypedetailpercategory
+     */
+    public function setMaterialmultiplier($materialmultiplier)
+    {
+        $this->materialmultiplier = $materialmultiplier;
+
+        return $this;
+    }
+
+    /**
+     * Get materialmultiplier
+     *
+     * @return float
+     */
+    public function getMaterialmultiplier()
+    {
+        return $this->materialmultiplier;
+    }
+
+    /**
+     * Set costmultiplier
+     *
+     * @param float $costmultiplier
+     *
+     * @return Ramassemblylinetypedetailpercategory
+     */
+    public function setCostmultiplier($costmultiplier)
+    {
+        $this->costmultiplier = $costmultiplier;
+
+        return $this;
+    }
+
+    /**
+     * Get costmultiplier
+     *
+     * @return float
+     */
+    public function getCostmultiplier()
+    {
+        return $this->costmultiplier;
+    }
+
+    /**
+     * Set assemblylinetypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Ramassemblylinetypes $assemblylinetypeid
+     *
+     * @return Ramassemblylinetypedetailpercategory
+     */
+    public function setAssemblylinetypeid(\Vibs\EvesymBundle\Entity\Ramassemblylinetypes $assemblylinetypeid = null)
+    {
+        $this->assemblylinetypeid = $assemblylinetypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get assemblylinetypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Ramassemblylinetypes
+     */
+    public function getAssemblylinetypeid()
+    {
+        return $this->assemblylinetypeid;
+    }
+
+    /**
+     * Set categoryid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invcategories $categoryid
+     *
+     * @return Ramassemblylinetypedetailpercategory
+     */
+    public function setCategoryid(\Vibs\EvesymBundle\Entity\Invcategories $categoryid = null)
+    {
+        $this->categoryid = $categoryid;
+
+        return $this;
+    }
+
+    /**
+     * Get categoryid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invcategories
+     */
+    public function getCategoryid()
+    {
+        return $this->categoryid;
+    }
+}

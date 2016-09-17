@@ -46,5 +46,86 @@ class Invmetagroups
     private $iconid;
 
 
-}
 
+    /**
+     * Get metagroupid
+     *
+     * @return integer
+     */
+    public function getMetagroupid()
+    {
+        return $this->metagroupid;
+    }
+
+    /**
+     * Set metagroupname
+     *
+     * @param string $metagroupname
+     *
+     * @return Invmetagroups
+     */
+    public function setMetagroupname($metagroupname)
+    {
+        $this->metagroupname = $metagroupname;
+
+        return $this;
+    }
+
+    /**
+     * Get metagroupname
+     *
+     * @return string
+     */
+    public function getMetagroupname()
+    {
+        return $this->metagroupname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Invmetagroups
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set iconid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Eveicons $iconid
+     *
+     * @return Invmetagroups
+     */
+    public function setIconid(\Vibs\EvesymBundle\Entity\Eveicons $iconid = null)
+    {
+        $this->iconid = $iconid;
+
+        return $this;
+    }
+
+    /**
+     * Get iconid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Eveicons
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+}

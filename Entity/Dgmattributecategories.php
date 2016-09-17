@@ -36,5 +36,62 @@ class Dgmattributecategories
     private $categorydescription;
 
 
-}
 
+    /**
+     * Get categoryid
+     *
+     * @return integer
+     */
+    public function getCategoryid()
+    {
+        return $this->categoryid;
+    }
+
+    /**
+     * Set categoryname
+     *
+     * @param string $categoryname
+     *
+     * @return Dgmattributecategories
+     */
+    public function setCategoryname($categoryname)
+    {
+        $this->categoryname = $categoryname;
+
+        return $this;
+    }
+
+    /**
+     * Get categoryname
+     *
+     * @return string
+     */
+    public function getCategoryname()
+    {
+        return $this->categoryname;
+    }
+
+    /**
+     * Set categorydescription
+     *
+     * @param string $categorydescription
+     *
+     * @return Dgmattributecategories
+     */
+    public function setCategorydescription($categorydescription)
+    {
+        $this->categorydescription = $categorydescription;
+
+        return $this;
+    }
+
+    /**
+     * Get categorydescription
+     *
+     * @return string
+     */
+    public function getCategorydescription()
+    {
+        return $this->categorydescription;
+    }
+}

@@ -63,5 +63,134 @@ class Invmarketgroups
     private $iconid;
 
 
-}
 
+    /**
+     * Get marketgroupid
+     *
+     * @return integer
+     */
+    public function getMarketgroupid()
+    {
+        return $this->marketgroupid;
+    }
+
+    /**
+     * Set marketgroupname
+     *
+     * @param string $marketgroupname
+     *
+     * @return Invmarketgroups
+     */
+    public function setMarketgroupname($marketgroupname)
+    {
+        $this->marketgroupname = $marketgroupname;
+
+        return $this;
+    }
+
+    /**
+     * Get marketgroupname
+     *
+     * @return string
+     */
+    public function getMarketgroupname()
+    {
+        return $this->marketgroupname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Invmarketgroups
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set hastypes
+     *
+     * @param boolean $hastypes
+     *
+     * @return Invmarketgroups
+     */
+    public function setHastypes($hastypes)
+    {
+        $this->hastypes = $hastypes;
+
+        return $this;
+    }
+
+    /**
+     * Get hastypes
+     *
+     * @return boolean
+     */
+    public function getHastypes()
+    {
+        return $this->hastypes;
+    }
+
+    /**
+     * Set parentgroupid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invmarketgroups $parentgroupid
+     *
+     * @return Invmarketgroups
+     */
+    public function setParentgroupid(\Vibs\EvesymBundle\Entity\Invmarketgroups $parentgroupid = null)
+    {
+        $this->parentgroupid = $parentgroupid;
+
+        return $this;
+    }
+
+    /**
+     * Get parentgroupid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invmarketgroups
+     */
+    public function getParentgroupid()
+    {
+        return $this->parentgroupid;
+    }
+
+    /**
+     * Set iconid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Eveicons $iconid
+     *
+     * @return Invmarketgroups
+     */
+    public function setIconid(\Vibs\EvesymBundle\Entity\Eveicons $iconid = null)
+    {
+        $this->iconid = $iconid;
+
+        return $this;
+    }
+
+    /**
+     * Get iconid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Eveicons
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+}

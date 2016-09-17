@@ -33,5 +33,52 @@ class Warcombatzonesystems
     private $combatzoneid;
 
 
-}
 
+    /**
+     * Set solarsystemid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapsolarsystems $solarsystemid
+     *
+     * @return Warcombatzonesystems
+     */
+    public function setSolarsystemid(\Vibs\EvesymBundle\Entity\Mapsolarsystems $solarsystemid = null)
+    {
+        $this->solarsystemid = $solarsystemid;
+
+        return $this;
+    }
+
+    /**
+     * Get solarsystemid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapsolarsystems
+     */
+    public function getSolarsystemid()
+    {
+        return $this->solarsystemid;
+    }
+
+    /**
+     * Set combatzoneid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Warcombatzones $combatzoneid
+     *
+     * @return Warcombatzonesystems
+     */
+    public function setCombatzoneid(\Vibs\EvesymBundle\Entity\Warcombatzones $combatzoneid = null)
+    {
+        $this->combatzoneid = $combatzoneid;
+
+        return $this;
+    }
+
+    /**
+     * Get combatzoneid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Warcombatzones
+     */
+    public function getCombatzoneid()
+    {
+        return $this->combatzoneid;
+    }
+}

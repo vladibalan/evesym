@@ -42,5 +42,62 @@ class Staoperationservices
     private $serviceid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set operationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Staoperations $operationid
+     *
+     * @return Staoperationservices
+     */
+    public function setOperationid(\Vibs\EvesymBundle\Entity\Staoperations $operationid = null)
+    {
+        $this->operationid = $operationid;
+
+        return $this;
+    }
+
+    /**
+     * Get operationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Staoperations
+     */
+    public function getOperationid()
+    {
+        return $this->operationid;
+    }
+
+    /**
+     * Set serviceid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Staservices $serviceid
+     *
+     * @return Staoperationservices
+     */
+    public function setServiceid(\Vibs\EvesymBundle\Entity\Staservices $serviceid = null)
+    {
+        $this->serviceid = $serviceid;
+
+        return $this;
+    }
+
+    /**
+     * Get serviceid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Staservices
+     */
+    public function getServiceid()
+    {
+        return $this->serviceid;
+    }
+}

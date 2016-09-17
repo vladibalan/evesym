@@ -50,5 +50,110 @@ class Ramactivities
     private $published;
 
 
-}
 
+    /**
+     * Get activityid
+     *
+     * @return integer
+     */
+    public function getActivityid()
+    {
+        return $this->activityid;
+    }
+
+    /**
+     * Set activityname
+     *
+     * @param string $activityname
+     *
+     * @return Ramactivities
+     */
+    public function setActivityname($activityname)
+    {
+        $this->activityname = $activityname;
+
+        return $this;
+    }
+
+    /**
+     * Get activityname
+     *
+     * @return string
+     */
+    public function getActivityname()
+    {
+        return $this->activityname;
+    }
+
+    /**
+     * Set iconno
+     *
+     * @param string $iconno
+     *
+     * @return Ramactivities
+     */
+    public function setIconno($iconno)
+    {
+        $this->iconno = $iconno;
+
+        return $this;
+    }
+
+    /**
+     * Get iconno
+     *
+     * @return string
+     */
+    public function getIconno()
+    {
+        return $this->iconno;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Ramactivities
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     *
+     * @return Ramactivities
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+}

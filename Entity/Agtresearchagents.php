@@ -42,5 +42,62 @@ class Agtresearchagents
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set agentid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Agtagents $agentid
+     *
+     * @return Agtresearchagents
+     */
+    public function setAgentid(\Vibs\EvesymBundle\Entity\Agtagents $agentid = null)
+    {
+        $this->agentid = $agentid;
+
+        return $this;
+    }
+
+    /**
+     * Get agentid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Agtagents
+     */
+    public function getAgentid()
+    {
+        return $this->agentid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Agtresearchagents
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

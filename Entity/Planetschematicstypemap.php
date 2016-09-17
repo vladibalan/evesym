@@ -56,5 +56,110 @@ class Planetschematicstypemap
     private $typeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Planetschematicstypemap
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set isinput
+     *
+     * @param boolean $isinput
+     *
+     * @return Planetschematicstypemap
+     */
+    public function setIsinput($isinput)
+    {
+        $this->isinput = $isinput;
+
+        return $this;
+    }
+
+    /**
+     * Get isinput
+     *
+     * @return boolean
+     */
+    public function getIsinput()
+    {
+        return $this->isinput;
+    }
+
+    /**
+     * Set schematicid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Planetschematics $schematicid
+     *
+     * @return Planetschematicstypemap
+     */
+    public function setSchematicid(\Vibs\EvesymBundle\Entity\Planetschematics $schematicid = null)
+    {
+        $this->schematicid = $schematicid;
+
+        return $this;
+    }
+
+    /**
+     * Get schematicid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Planetschematics
+     */
+    public function getSchematicid()
+    {
+        return $this->schematicid;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $typeid
+     *
+     * @return Planetschematicstypemap
+     */
+    public function setTypeid(\Vibs\EvesymBundle\Entity\Invtypes $typeid = null)
+    {
+        $this->typeid = $typeid;
+
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+}

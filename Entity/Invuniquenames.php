@@ -39,5 +39,62 @@ class Invuniquenames
     private $groupid;
 
 
-}
 
+    /**
+     * Get itemid
+     *
+     * @return integer
+     */
+    public function getItemid()
+    {
+        return $this->itemid;
+    }
+
+    /**
+     * Set itemname
+     *
+     * @param string $itemname
+     *
+     * @return Invuniquenames
+     */
+    public function setItemname($itemname)
+    {
+        $this->itemname = $itemname;
+
+        return $this;
+    }
+
+    /**
+     * Get itemname
+     *
+     * @return string
+     */
+    public function getItemname()
+    {
+        return $this->itemname;
+    }
+
+    /**
+     * Set groupid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invgroups $groupid
+     *
+     * @return Invuniquenames
+     */
+    public function setGroupid(\Vibs\EvesymBundle\Entity\Invgroups $groupid = null)
+    {
+        $this->groupid = $groupid;
+
+        return $this;
+    }
+
+    /**
+     * Get groupid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invgroups
+     */
+    public function getGroupid()
+    {
+        return $this->groupid;
+    }
+}

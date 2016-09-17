@@ -56,5 +56,110 @@ class Warcombatzones
     private $centersystemid;
 
 
-}
 
+    /**
+     * Get combatzoneid
+     *
+     * @return integer
+     */
+    public function getCombatzoneid()
+    {
+        return $this->combatzoneid;
+    }
+
+    /**
+     * Set combatzonename
+     *
+     * @param string $combatzonename
+     *
+     * @return Warcombatzones
+     */
+    public function setCombatzonename($combatzonename)
+    {
+        $this->combatzonename = $combatzonename;
+
+        return $this;
+    }
+
+    /**
+     * Get combatzonename
+     *
+     * @return string
+     */
+    public function getCombatzonename()
+    {
+        return $this->combatzonename;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Warcombatzones
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set factionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Chrfactions $factionid
+     *
+     * @return Warcombatzones
+     */
+    public function setFactionid(\Vibs\EvesymBundle\Entity\Chrfactions $factionid = null)
+    {
+        $this->factionid = $factionid;
+
+        return $this;
+    }
+
+    /**
+     * Get factionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Chrfactions
+     */
+    public function getFactionid()
+    {
+        return $this->factionid;
+    }
+
+    /**
+     * Set centersystemid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapsolarsystems $centersystemid
+     *
+     * @return Warcombatzones
+     */
+    public function setCentersystemid(\Vibs\EvesymBundle\Entity\Mapsolarsystems $centersystemid = null)
+    {
+        $this->centersystemid = $centersystemid;
+
+        return $this;
+    }
+
+    /**
+     * Get centersystemid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapsolarsystems
+     */
+    public function getCentersystemid()
+    {
+        return $this->centersystemid;
+    }
+}

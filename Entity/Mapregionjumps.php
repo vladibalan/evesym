@@ -42,5 +42,62 @@ class Mapregionjumps
     private $toregionid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set fromregionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapregions $fromregionid
+     *
+     * @return Mapregionjumps
+     */
+    public function setFromregionid(\Vibs\EvesymBundle\Entity\Mapregions $fromregionid = null)
+    {
+        $this->fromregionid = $fromregionid;
+
+        return $this;
+    }
+
+    /**
+     * Get fromregionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapregions
+     */
+    public function getFromregionid()
+    {
+        return $this->fromregionid;
+    }
+
+    /**
+     * Set toregionid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapregions $toregionid
+     *
+     * @return Mapregionjumps
+     */
+    public function setToregionid(\Vibs\EvesymBundle\Entity\Mapregions $toregionid = null)
+    {
+        $this->toregionid = $toregionid;
+
+        return $this;
+    }
+
+    /**
+     * Get toregionid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapregions
+     */
+    public function getToregionid()
+    {
+        return $this->toregionid;
+    }
+}

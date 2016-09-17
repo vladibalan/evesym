@@ -49,5 +49,86 @@ class Raminstallationtypecontents
     private $installationtypeid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Raminstallationtypecontents
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set assemblylinetypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Ramassemblylinetypes $assemblylinetypeid
+     *
+     * @return Raminstallationtypecontents
+     */
+    public function setAssemblylinetypeid(\Vibs\EvesymBundle\Entity\Ramassemblylinetypes $assemblylinetypeid = null)
+    {
+        $this->assemblylinetypeid = $assemblylinetypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get assemblylinetypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Ramassemblylinetypes
+     */
+    public function getAssemblylinetypeid()
+    {
+        return $this->assemblylinetypeid;
+    }
+
+    /**
+     * Set installationtypeid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invtypes $installationtypeid
+     *
+     * @return Raminstallationtypecontents
+     */
+    public function setInstallationtypeid(\Vibs\EvesymBundle\Entity\Invtypes $installationtypeid = null)
+    {
+        $this->installationtypeid = $installationtypeid;
+
+        return $this;
+    }
+
+    /**
+     * Get installationtypeid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invtypes
+     */
+    public function getInstallationtypeid()
+    {
+        return $this->installationtypeid;
+    }
+}

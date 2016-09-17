@@ -29,5 +29,38 @@ class Invnames
     private $itemname;
 
 
-}
 
+    /**
+     * Get itemid
+     *
+     * @return integer
+     */
+    public function getItemid()
+    {
+        return $this->itemid;
+    }
+
+    /**
+     * Set itemname
+     *
+     * @param string $itemname
+     *
+     * @return Invnames
+     */
+    public function setItemname($itemname)
+    {
+        $this->itemname = $itemname;
+
+        return $this;
+    }
+
+    /**
+     * Get itemname
+     *
+     * @return string
+     */
+    public function getItemname()
+    {
+        return $this->itemname;
+    }
+}

@@ -71,5 +71,182 @@ class Maplandmarks
     private $iconid;
 
 
-}
 
+    /**
+     * Get landmarkid
+     *
+     * @return integer
+     */
+    public function getLandmarkid()
+    {
+        return $this->landmarkid;
+    }
+
+    /**
+     * Set landmarkname
+     *
+     * @param string $landmarkname
+     *
+     * @return Maplandmarks
+     */
+    public function setLandmarkname($landmarkname)
+    {
+        $this->landmarkname = $landmarkname;
+
+        return $this;
+    }
+
+    /**
+     * Get landmarkname
+     *
+     * @return string
+     */
+    public function getLandmarkname()
+    {
+        return $this->landmarkname;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Maplandmarks
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set locationid
+     *
+     * @param integer $locationid
+     *
+     * @return Maplandmarks
+     */
+    public function setLocationid($locationid)
+    {
+        $this->locationid = $locationid;
+
+        return $this;
+    }
+
+    /**
+     * Get locationid
+     *
+     * @return integer
+     */
+    public function getLocationid()
+    {
+        return $this->locationid;
+    }
+
+    /**
+     * Set x
+     *
+     * @param float $x
+     *
+     * @return Maplandmarks
+     */
+    public function setX($x)
+    {
+        $this->x = $x;
+
+        return $this;
+    }
+
+    /**
+     * Get x
+     *
+     * @return float
+     */
+    public function getX()
+    {
+        return $this->x;
+    }
+
+    /**
+     * Set y
+     *
+     * @param float $y
+     *
+     * @return Maplandmarks
+     */
+    public function setY($y)
+    {
+        $this->y = $y;
+
+        return $this;
+    }
+
+    /**
+     * Get y
+     *
+     * @return float
+     */
+    public function getY()
+    {
+        return $this->y;
+    }
+
+    /**
+     * Set z
+     *
+     * @param float $z
+     *
+     * @return Maplandmarks
+     */
+    public function setZ($z)
+    {
+        $this->z = $z;
+
+        return $this;
+    }
+
+    /**
+     * Get z
+     *
+     * @return float
+     */
+    public function getZ()
+    {
+        return $this->z;
+    }
+
+    /**
+     * Set iconid
+     *
+     * @param integer $iconid
+     *
+     * @return Maplandmarks
+     */
+    public function setIconid($iconid)
+    {
+        $this->iconid = $iconid;
+
+        return $this;
+    }
+
+    /**
+     * Get iconid
+     *
+     * @return integer
+     */
+    public function getIconid()
+    {
+        return $this->iconid;
+    }
+}
