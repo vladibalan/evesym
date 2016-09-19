@@ -1,7 +1,19 @@
 Vibs\EvesymBundle\Entity\Invpositions:
     type: entity
     table: invPositions
-    id: {  }
+    indexes:
+        itemID:
+            columns:
+                - itemID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
     fields:
         x:
             type: float
@@ -33,7 +45,7 @@ Vibs\EvesymBundle\Entity\Invpositions:
             nullable: true
             precision: 10
             scale: 0
-    oneToOne:
+    manyToOne:
         itemid:
             targetEntity: Invnames
             cascade: {  }

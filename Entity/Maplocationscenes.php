@@ -7,20 +7,19 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Maplocationscenes
  *
- * @ORM\Table(name="mapLocationScenes", indexes={@ORM\Index(name="graphicID", columns={"graphicID"})})
+ * @ORM\Table(name="mapLocationScenes", indexes={@ORM\Index(name="graphicID", columns={"graphicID"}), @ORM\Index(name="locationID", columns={"locationID"})})
  * @ORM\Entity
  */
 class Maplocationscenes
 {
     /**
-     * @var \Vibs\EvesymBundle\Entity\Mapregions
+     * @var integer
      *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Mapregions")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="locationID", referencedColumnName="regionID", unique=true)
-     * })
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $locationid;
+    private $id;
 
     /**
      * @var \Vibs\EvesymBundle\Entity\Evegraphics
@@ -32,30 +31,26 @@ class Maplocationscenes
      */
     private $graphicid;
 
+    /**
+     * @var \Vibs\EvesymBundle\Entity\Mapregions
+     *
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Mapregions")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="locationID", referencedColumnName="regionID")
+     * })
+     */
+    private $locationid;
+
 
 
     /**
-     * Set locationid
+     * Get id
      *
-     * @param \Vibs\EvesymBundle\Entity\Mapregions $locationid
-     *
-     * @return Maplocationscenes
+     * @return integer
      */
-    public function setLocationid(\Vibs\EvesymBundle\Entity\Mapregions $locationid = null)
+    public function getId()
     {
-        $this->locationid = $locationid;
-
-        return $this;
-    }
-
-    /**
-     * Get locationid
-     *
-     * @return \Vibs\EvesymBundle\Entity\Mapregions
-     */
-    public function getLocationid()
-    {
-        return $this->locationid;
+        return $this->id;
     }
 
     /**
@@ -80,5 +75,29 @@ class Maplocationscenes
     public function getGraphicid()
     {
         return $this->graphicid;
+    }
+
+    /**
+     * Set locationid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Mapregions $locationid
+     *
+     * @return Maplocationscenes
+     */
+    public function setLocationid(\Vibs\EvesymBundle\Entity\Mapregions $locationid = null)
+    {
+        $this->locationid = $locationid;
+
+        return $this;
+    }
+
+    /**
+     * Get locationid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Mapregions
+     */
+    public function getLocationid()
+    {
+        return $this->locationid;
     }
 }

@@ -8,8 +8,19 @@ Vibs\EvesymBundle\Entity\Invmetatypes:
         metaGroupID:
             columns:
                 - metaGroupID
-    id: {  }
-    oneToOne:
+        typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
         typeid:
             targetEntity: Invtypes
             cascade: {  }
@@ -20,7 +31,6 @@ Vibs\EvesymBundle\Entity\Invmetatypes:
                 typeID:
                     referencedColumnName: typeID
             orphanRemoval: false
-    manyToOne:
         parenttypeid:
             targetEntity: Invtypes
             cascade: {  }

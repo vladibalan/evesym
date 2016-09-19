@@ -29,10 +29,21 @@ Vibs\EvesymBundle\Entity\Mapdenormalize:
         ix_mapDenormalize_typeID:
             columns:
                 - typeID
+        itemID:
+            columns:
+                - itemID
         IDX_64B77626D6EFA878:
             columns:
                 - groupID
-    id: {  }
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
     fields:
         x:
             type: float
@@ -78,7 +89,7 @@ Vibs\EvesymBundle\Entity\Mapdenormalize:
             options:
                 unsigned: false
             column: orbitIndex
-    oneToOne:
+    manyToOne:
         itemid:
             targetEntity: Invnames
             cascade: {  }
@@ -89,7 +100,6 @@ Vibs\EvesymBundle\Entity\Mapdenormalize:
                 itemID:
                     referencedColumnName: itemID
             orphanRemoval: false
-    manyToOne:
         typeid:
             targetEntity: Invtypes
             cascade: {  }

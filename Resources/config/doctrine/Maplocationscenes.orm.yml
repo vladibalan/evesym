@@ -5,7 +5,18 @@ Vibs\EvesymBundle\Entity\Maplocationscenes:
         graphicID:
             columns:
                 - graphicID
-    id: {  }
+        locationID:
+            columns:
+                - locationID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
     manyToOne:
         graphicid:
             targetEntity: Evegraphics
@@ -17,7 +28,6 @@ Vibs\EvesymBundle\Entity\Maplocationscenes:
                 graphicID:
                     referencedColumnName: graphicID
             orphanRemoval: false
-    oneToOne:
         locationid:
             targetEntity: Mapregions
             cascade: {  }

@@ -7,11 +7,20 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Invpositions
  *
- * @ORM\Table(name="invPositions")
+ * @ORM\Table(name="invPositions", indexes={@ORM\Index(name="itemID", columns={"itemID"})})
  * @ORM\Entity
  */
 class Invpositions
 {
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
     /**
      * @var float
      *
@@ -57,15 +66,24 @@ class Invpositions
     /**
      * @var \Vibs\EvesymBundle\Entity\Invnames
      *
-	 * @ORM\Id
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID", unique=true)
+     *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID")
      * })
      */
     private $itemid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set x

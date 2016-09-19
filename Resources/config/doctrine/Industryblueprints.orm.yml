@@ -1,7 +1,19 @@
 Vibs\EvesymBundle\Entity\Industryblueprints:
     type: entity
     table: industryBlueprints
-    id: {  }
+    indexes:
+        typeID:
+            columns:
+                - typeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
     fields:
         maxproductionlimit:
             type: integer
@@ -9,7 +21,7 @@ Vibs\EvesymBundle\Entity\Industryblueprints:
             options:
                 unsigned: false
             column: maxProductionLimit
-    oneToOne:
+    manyToOne:
         typeid:
             targetEntity: Invtypes
             cascade: {  }

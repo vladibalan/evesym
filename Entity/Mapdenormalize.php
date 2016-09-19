@@ -7,11 +7,20 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Mapdenormalize
  *
- * @ORM\Table(name="mapDenormalize", indexes={@ORM\Index(name="ix_mapDenormalize_regionID", columns={"regionID"}), @ORM\Index(name="mapDenormalize_IX_groupConstellation", columns={"groupID", "constellationID"}), @ORM\Index(name="ix_mapDenormalize_solarSystemID", columns={"solarSystemID"}), @ORM\Index(name="ix_mapDenormalize_orbitID", columns={"orbitID"}), @ORM\Index(name="mapDenormalize_IX_groupSystem", columns={"groupID", "solarSystemID"}), @ORM\Index(name="ix_mapDenormalize_constellationID", columns={"constellationID"}), @ORM\Index(name="mapDenormalize_IX_groupRegion", columns={"groupID", "regionID"}), @ORM\Index(name="ix_mapDenormalize_typeID", columns={"typeID"}), @ORM\Index(name="IDX_64B77626D6EFA878", columns={"groupID"})})
+ * @ORM\Table(name="mapDenormalize", indexes={@ORM\Index(name="ix_mapDenormalize_regionID", columns={"regionID"}), @ORM\Index(name="mapDenormalize_IX_groupConstellation", columns={"groupID", "constellationID"}), @ORM\Index(name="ix_mapDenormalize_solarSystemID", columns={"solarSystemID"}), @ORM\Index(name="ix_mapDenormalize_orbitID", columns={"orbitID"}), @ORM\Index(name="mapDenormalize_IX_groupSystem", columns={"groupID", "solarSystemID"}), @ORM\Index(name="ix_mapDenormalize_constellationID", columns={"constellationID"}), @ORM\Index(name="mapDenormalize_IX_groupRegion", columns={"groupID", "regionID"}), @ORM\Index(name="ix_mapDenormalize_typeID", columns={"typeID"}), @ORM\Index(name="itemID", columns={"itemID"}), @ORM\Index(name="IDX_64B77626D6EFA878", columns={"groupID"})})
  * @ORM\Entity
  */
 class Mapdenormalize
 {
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
     /**
      * @var float
      *
@@ -71,9 +80,9 @@ class Mapdenormalize
     /**
      * @var \Vibs\EvesymBundle\Entity\Invnames
      *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID", unique=true)
+     *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID")
      * })
      */
     private $itemid;
@@ -139,6 +148,16 @@ class Mapdenormalize
     private $orbitid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set x

@@ -20,6 +20,22 @@ ALTER TABLE `industryActivityMaterials` ADD `id` int NOT NULL AUTO_INCREMENT PRI
 ALTER TABLE `industryActivityProbabilities` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 ALTER TABLE `industryActivityProducts` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 ALTER TABLE `industryActivityRaces` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `industryBlueprints` ADD INDEX `typeID` (`typeID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `industryBlueprints` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `invItems` ADD INDEX `itemID` (`itemID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `invItems` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `invMetaTypes` ADD INDEX `typeID` (`typeID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `invMetaTypes` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `invPositions` ADD INDEX `itemID` (`itemID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `invPositions` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `mapDenormalize` ADD INDEX `itemID` (`itemID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `mapDenormalize` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `mapLocationScenes` ADD INDEX `locationID` (`locationID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `mapLocationScenes` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `skinLicense` ADD INDEX `licenseTypeID` (`licenseTypeID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `skinLicense` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+ALTER TABLE `warCombatZoneSystems` ADD INDEX `solarSystemID` (`solarSystemID`), DROP INDEX `PRIMARY`;
+ALTER TABLE `warCombatZoneSystems` ADD `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 
 /* industryActivitySkills has duplicate rows - i've removed them using a temporary table*/
 CREATE TABLE `industryActivitySkillsTmp` AS SELECT DISTINCT * FROM `industryActivitySkills`;

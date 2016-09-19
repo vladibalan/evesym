@@ -7,17 +7,26 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Invmetatypes
  *
- * @ORM\Table(name="invMetaTypes", indexes={@ORM\Index(name="parentTypeID", columns={"parentTypeID"}), @ORM\Index(name="metaGroupID", columns={"metaGroupID"})})
+ * @ORM\Table(name="invMetaTypes", indexes={@ORM\Index(name="parentTypeID", columns={"parentTypeID"}), @ORM\Index(name="metaGroupID", columns={"metaGroupID"}), @ORM\Index(name="typeID", columns={"typeID"})})
  * @ORM\Entity
  */
 class Invmetatypes
 {
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
      * @var \Vibs\EvesymBundle\Entity\Invtypes
      *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invtypes")
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invtypes")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="typeID", referencedColumnName="typeID", unique=true)
+     *   @ORM\JoinColumn(name="typeID", referencedColumnName="typeID")
      * })
      */
     private $typeid;
@@ -43,6 +52,16 @@ class Invmetatypes
     private $metagroupid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set typeid

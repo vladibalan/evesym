@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Invitems
  *
- * @ORM\Table(name="invItems", indexes={@ORM\Index(name="ix_invItems_locationID", columns={"locationID"}), @ORM\Index(name="items_IX_OwnerLocation", columns={"ownerID", "locationID"}), @ORM\Index(name="typeID", columns={"typeID"}), @ORM\Index(name="flagID", columns={"flagID"}), @ORM\Index(name="IDX_4A898CC9DB30DDED", columns={"ownerID"})})
+ * @ORM\Table(name="invItems", indexes={@ORM\Index(name="ix_invItems_locationID", columns={"locationID"}), @ORM\Index(name="items_IX_OwnerLocation", columns={"ownerID", "locationID"}), @ORM\Index(name="typeID", columns={"typeID"}), @ORM\Index(name="flagID", columns={"flagID"}), @ORM\Index(name="itemID", columns={"itemID"}), @ORM\Index(name="IDX_4A898CC9DB30DDED", columns={"ownerID"})})
  * @ORM\Entity
  */
 class Invitems
@@ -15,19 +15,18 @@ class Invitems
     /**
      * @var integer
      *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
      * @ORM\Column(name="quantity", type="integer", nullable=false)
      */
     private $quantity;
-
-    /**
-     * @var \Vibs\EvesymBundle\Entity\Invnames
-     *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID", unique=true)
-     * })
-     */
-    private $itemid;
 
     /**
      * @var \Vibs\EvesymBundle\Entity\Invtypes
@@ -54,6 +53,16 @@ class Invitems
      *
      * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
      * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID")
+     * })
+     */
+    private $itemid;
+
+    /**
+     * @var \Vibs\EvesymBundle\Entity\Invnames
+     *
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
+     * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="locationID", referencedColumnName="itemID")
      * })
      */
@@ -70,6 +79,16 @@ class Invitems
     private $ownerid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set quantity
@@ -93,30 +112,6 @@ class Invitems
     public function getQuantity()
     {
         return $this->quantity;
-    }
-
-    /**
-     * Set itemid
-     *
-     * @param \Vibs\EvesymBundle\Entity\Invnames $itemid
-     *
-     * @return Invitems
-     */
-    public function setItemid(\Vibs\EvesymBundle\Entity\Invnames $itemid = null)
-    {
-        $this->itemid = $itemid;
-
-        return $this;
-    }
-
-    /**
-     * Get itemid
-     *
-     * @return \Vibs\EvesymBundle\Entity\Invnames
-     */
-    public function getItemid()
-    {
-        return $this->itemid;
     }
 
     /**
@@ -165,6 +160,30 @@ class Invitems
     public function getFlagid()
     {
         return $this->flagid;
+    }
+
+    /**
+     * Set itemid
+     *
+     * @param \Vibs\EvesymBundle\Entity\Invnames $itemid
+     *
+     * @return Invitems
+     */
+    public function setItemid(\Vibs\EvesymBundle\Entity\Invnames $itemid = null)
+    {
+        $this->itemid = $itemid;
+
+        return $this;
+    }
+
+    /**
+     * Get itemid
+     *
+     * @return \Vibs\EvesymBundle\Entity\Invnames
+     */
+    public function getItemid()
+    {
+        return $this->itemid;
     }
 
     /**

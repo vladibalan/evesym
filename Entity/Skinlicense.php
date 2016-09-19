@@ -7,11 +7,20 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Skinlicense
  *
- * @ORM\Table(name="skinLicense", indexes={@ORM\Index(name="skinID", columns={"skinID"})})
+ * @ORM\Table(name="skinLicense", indexes={@ORM\Index(name="skinID", columns={"skinID"}), @ORM\Index(name="licenseTypeID", columns={"licenseTypeID"})})
  * @ORM\Entity
  */
 class Skinlicense
 {
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
     /**
      * @var integer
      *
@@ -22,9 +31,9 @@ class Skinlicense
     /**
      * @var \Vibs\EvesymBundle\Entity\Invtypes
      *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invtypes")
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invtypes")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="licenseTypeID", referencedColumnName="typeID", unique=true)
+     *   @ORM\JoinColumn(name="licenseTypeID", referencedColumnName="typeID")
      * })
      */
     private $licensetypeid;
@@ -40,6 +49,16 @@ class Skinlicense
     private $skinid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set duration

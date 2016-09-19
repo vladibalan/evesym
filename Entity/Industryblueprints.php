@@ -7,11 +7,20 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Industryblueprints
  *
- * @ORM\Table(name="industryBlueprints")
+ * @ORM\Table(name="industryBlueprints", indexes={@ORM\Index(name="typeID", columns={"typeID"})})
  * @ORM\Entity
  */
 class Industryblueprints
 {
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
     /**
      * @var integer
      *
@@ -22,14 +31,24 @@ class Industryblueprints
     /**
      * @var \Vibs\EvesymBundle\Entity\Invtypes
      *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invtypes")
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Invtypes")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="typeID", referencedColumnName="typeID", unique=true)
+     *   @ORM\JoinColumn(name="typeID", referencedColumnName="typeID")
      * })
      */
     private $typeid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set maxproductionlimit

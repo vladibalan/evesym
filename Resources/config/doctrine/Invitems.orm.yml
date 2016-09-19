@@ -15,10 +15,21 @@ Vibs\EvesymBundle\Entity\Invitems:
         flagID:
             columns:
                 - flagID
+        itemID:
+            columns:
+                - itemID
         IDX_4A898CC9DB30DDED:
             columns:
                 - ownerID
-    id: {  }
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
     fields:
         quantity:
             type: integer
@@ -46,6 +57,16 @@ Vibs\EvesymBundle\Entity\Invitems:
                 flagID:
                     referencedColumnName: flagID
             orphanRemoval: false
+        itemid:
+            targetEntity: Invnames
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                itemID:
+                    referencedColumnName: itemID
+            orphanRemoval: false
         locationid:
             targetEntity: Invnames
             cascade: {  }
@@ -64,17 +85,6 @@ Vibs\EvesymBundle\Entity\Invitems:
             inversedBy: null
             joinColumns:
                 ownerID:
-                    referencedColumnName: itemID
-            orphanRemoval: false
-    oneToOne:
-        itemid:
-            targetEntity: Invnames
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                itemID:
                     referencedColumnName: itemID
             orphanRemoval: false
     lifecycleCallbacks: {  }

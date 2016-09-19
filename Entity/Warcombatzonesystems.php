@@ -7,17 +7,26 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Warcombatzonesystems
  *
- * @ORM\Table(name="warCombatZoneSystems", indexes={@ORM\Index(name="combatZoneID", columns={"combatZoneID"})})
+ * @ORM\Table(name="warCombatZoneSystems", indexes={@ORM\Index(name="combatZoneID", columns={"combatZoneID"}), @ORM\Index(name="solarSystemID", columns={"solarSystemID"})})
  * @ORM\Entity
  */
 class Warcombatzonesystems
 {
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
      * @var \Vibs\EvesymBundle\Entity\Mapsolarsystems
      *
-     * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Mapsolarsystems")
+     * @ORM\ManyToOne(targetEntity="Vibs\EvesymBundle\Entity\Mapsolarsystems")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="solarSystemID", referencedColumnName="solarSystemID", unique=true)
+     *   @ORM\JoinColumn(name="solarSystemID", referencedColumnName="solarSystemID")
      * })
      */
     private $solarsystemid;
@@ -33,6 +42,16 @@ class Warcombatzonesystems
     private $combatzoneid;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set solarsystemid

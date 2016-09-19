@@ -5,14 +5,25 @@ Vibs\EvesymBundle\Entity\Skinlicense:
         skinID:
             columns:
                 - skinID
-    id: {  }
+        licenseTypeID:
+            columns:
+                - licenseTypeID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
     fields:
         duration:
             type: integer
             nullable: true
             options:
                 unsigned: false
-    oneToOne:
+    manyToOne:
         licensetypeid:
             targetEntity: Invtypes
             cascade: {  }
@@ -23,7 +34,6 @@ Vibs\EvesymBundle\Entity\Skinlicense:
                 licenseTypeID:
                     referencedColumnName: typeID
             orphanRemoval: false
-    manyToOne:
         skinid:
             targetEntity: Skins
             cascade: {  }

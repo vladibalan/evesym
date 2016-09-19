@@ -5,8 +5,19 @@ Vibs\EvesymBundle\Entity\Warcombatzonesystems:
         combatZoneID:
             columns:
                 - combatZoneID
-    id: {  }
-    oneToOne:
+        solarSystemID:
+            columns:
+                - solarSystemID
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
         solarsystemid:
             targetEntity: Mapsolarsystems
             cascade: {  }
@@ -17,7 +28,6 @@ Vibs\EvesymBundle\Entity\Warcombatzonesystems:
                 solarSystemID:
                     referencedColumnName: solarSystemID
             orphanRemoval: false
-    manyToOne:
         combatzoneid:
             targetEntity: Warcombatzones
             cascade: {  }
