@@ -57,6 +57,7 @@ class Invpositions
     /**
      * @var \Vibs\EvesymBundle\Entity\Invnames
      *
+	 * @ORM\Id
      * @ORM\OneToOne(targetEntity="Vibs\EvesymBundle\Entity\Invnames")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="itemID", referencedColumnName="itemID", unique=true)
